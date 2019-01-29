@@ -703,55 +703,6 @@ missdata.fillna(999)
 # https://www.tutorialspoint.com/python_pandas/python_pandas_missing_data.htm
 # https://chrisalbon.com/python/data_wrangling/pandas_missing_data/
 
-# ---MATRIX AND ARRAY OPERATION---
-#
-#Matrix like a data frame, usually all numeric
-
-# ---ARRAYS---
-#
-# A set of matrices stacked like pages in a book
-#
-# vectors and matrices are simple arrays (1D, 2D)   
-# 1D = list
-# 2D = matrix, dataframe
-# 3D (or higher) = array
-
-import numpy as np
-
-# Generate a matrix 
-#  a =|  1  0 |   b= | 4  1|
-#     |  0  1 |      | 2  2|
-
-a = [[1, 0],
-     [0, 1]]
-b = [[4, 1],
-     [2, 2]]
-
-# Matrix/array addition
-import numpy as np
-np.add(a, b)
-# Cannot use a+b
-a + b
-
-# Matrix/array subcration, element-wise
-np.subtract(a, b)
-
-# matrix multiplication
-
-np.matmul(a, b)
-np.dot(a,b)
-
-#numply.multiply; perform element wise multiplication.
-np.multiply(a, b)
-
-# The element wise division of a matrix/arrary.
-np.divide(a, b)
-
-# Use numpy zeros function to create a 2 by 2 by 2 array
-ThreeDarray = np.zeros((2, 2, 2))
-
-ThreeDarray
-
 #---BASE GRAPHICS USING SEABORN---
 
 import seaborn as sns
