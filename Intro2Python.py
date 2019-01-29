@@ -109,14 +109,6 @@ print('Scipy version: ' + sp.__version__)
 print('Seaborn version ' + sns.__version__)
 print('Statsmodels version ' + sms.__version__)
 
-# python path use "/" or "\\" instead of "\"
-# put a r before the path string without using / or \\.
-mydata = pd.read_csv(r'I:\Classes\OIT_Training\Intro to Python\mydata.csv', sep=',', na_values=".")
-print(mydata.head())
-# Look at the first 3 rows
-mydata[:3]
-
-
 # ---GOOD SOURCES OF PYTHON HELP---
 #
 # UT people get 15 hours per semester of 
@@ -188,7 +180,11 @@ print(os.getcwd()) # Prints the working directory
 
 # Set the working directory:
 
+# python path use "/" or "\\" instead of "\"
+# put a r before the path string without using / or \\.
+
 os.chdir(r"C:\Users\XZHU8\Documents\python4stats") # Provide the path here
+
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
 
