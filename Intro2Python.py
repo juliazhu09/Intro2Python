@@ -196,17 +196,19 @@ print(os.getcwd())
 # When creating objects, you give them
 # values using the assignment operator
 # "=" as here:
+
 mydata = pd.read_csv("mydata.csv")
+mydata.head()
 
 #---PYTHON VARIABLES---
 #
 # Python's variable Types:
 # Number (int, long, float, Complex)
 # String
+# Boolean
 # List
 # Tuple
 # Dictionary
-# Boolean
 # We focus on list today. For details, see
 # https://www.tutorialspoint.com/python/python_variable_types.htm
 # Example
@@ -218,7 +220,7 @@ type(a)
 
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
-# variables can be mixed types.
+# Variables can be mixed types in a list.
 mixlist = ["a", 1]
 mixlist
 # Note: first item's index is 0 not 1.
@@ -232,7 +234,8 @@ import matplotlib.image as mpimg
 img=mpimg.imread('apples.png')
 imgplot = plt.imshow(img)
 plt.show()
-# Tuples:Like lists, but immutable, and usually used for smaller sequences
+# Tuples:Like lists, contains several items enclosed within parenthesis.
+# but immutable, and usually used for smaller sequences
 # of things that are related to each other.
 # Think of Cartesian coordinates:(x, y, z)
 # The differences between tuples and lists are, the tuples cannot be changed 
@@ -248,7 +251,9 @@ alist=["foo", "bar"]
 alist[0] = 100
 alist
 
-# Dicitonairy: A collection of variables indexed by other, "key" variable.
+# Dicitonairy: A collection of variables indexed by other, "key" variables.
+# Instead of using numeric or default index in python, if you want to 
+# create your own index, you need to use dictionary.
 aDict = {}
 aDict["a"] = 364936
 aDict["b"] = 12.4 
@@ -272,7 +277,7 @@ print(keyword.kwlist)
 # etc. are objects, with its properties/attributes 
 # and methods/functions.
 #
-# Object names should begin with a letter 
+# The object names should begin with a letter 
 # and can contain letters, numbers, 
 # underscores. 
 # But cannot have space or period. 
@@ -295,7 +300,7 @@ dir(mydata)
 # As you already know, Python gives you many built-in 
 # functions e.g. print(mydata), dir(), type()
 
-# When you use a function, you "call" it
+# When you use a function, you "call" its name.
 #
 # print() is the default function
 #   so this function call:  print(q1) 
@@ -327,14 +332,11 @@ np.sum(np.log(mydata['q1']))
 # different types of arguments. The argument types
 # and their meanings, however, are pre-defined and
 # can’t be changed. a function is defined using 
-# the def keyword, and end with a colon ":"
-# and use indentation to define the content of the function.
-#
-# Python use indentiation to mark blocks of code.
-# Indent four spaces to show what block of code
-# a statement belongs to. Tab key is the shortcut 
-# for 4 spaces indentation. The colon is used to 
-# declare the start of an indented block. 
+# the def keyword, and use indentation
+# to define the content of the function.
+# The content indents four spaces.
+# Use Tab key as the shortcut 
+# The colon is used to declare the start of an indented block. 
 # When we need to use indentation:
 #    if/else statement
 #    for/while statement
@@ -374,6 +376,7 @@ def square(x):
 
 result = square(10)
 result
+# Notice: Cannot use print to return a value
 
 #---CONDITION STATEMENTS---
 #
@@ -452,9 +455,7 @@ checkNumber(10, 1)
 # elements of some iterable object. They make a for loop.
 # Iterable objects are those that have a defined sequence of zero or more objects.
 # e.g. lists, strings, tuples, etc.
-namelist = ["Bob", "Josh", "Cary","Cristina", "Harshita", "Jaewoo", "Jialin", "Jose", "Katie", "Lu",
-"Matthew", "Michael", "Mohmad", "Paychuda", "Rochelle", "Saad Abd Ar", "Stone", "Tracey", "Xiaocun", 
-"Yaxiong", "Lauren"]
+namelist = ["Bob", "Josh", "Cary","Michael","Rochelle", "Sun"]
 
 for name in namelist:
     print ("Hello, " + name + "!")
@@ -496,7 +497,7 @@ while i < 10:
     i =  i + 1
 
 i
-# If we left out the increment, we could always be <10,
+# If we left out the increment, 1 could always be <10,
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
 
@@ -646,59 +647,6 @@ femaleQsloc
 # More details about subsetting data, see
 # https://stackoverflow.com/questions/10665889/how-to-take-column-slices-of-dataframe-in-pandas
 
-# ---MISSING VALUSE---
-# 
-raw_data = {'first_name': ['Jason', np.nan, 'Tina', 'Jake', 'Amy'], 
-        'last_name': ['Miller', np.nan, 'Ali', 'Milner', 'Cooze'], 
-        'age': [42, np.nan, 36, 24, 73], 
-        'sex': ['m', np.nan, 'f', 'm', 'f'], 
-        'preTestScore': [4, np.nan, np.nan, 2, 3],
-        'postTestScore': [25, np.nan, np.nan, 62, 70]}
-missdata = pd.DataFrame(raw_data, columns = ['first_name', 
-'last_name', 'age', 'sex',  'preTestScore', 'postTestScore'])
-
-missdata
-# Test for missing use isnull function
-
-missdata.isnull()  
-
-# Count missing by columns
-missdata.isnull().sum()
-
-# Count all missing values
-missdata.isnull().sum().sum()
-
-# Find non Missing values
-missdata.notnull()
-
-#---ACTION ON MISSING VALUES---
-#
-#
-# Drop missing observations
-missdata.dropna()
-
-
-# Drop rows where all cells in that row is NA
-missdata.dropna(how='all')
-
-#Drop column if they only contain missing values
-missdata['missingcol'] = [np.nan, np.nan, np.nan, np.nan, np.nan]
-missdata
-
-missdata.dropna(axis=1, how='all')
-
-#Keep only the rows that contain at least two non-missings
-#This is really mostly useful for time series
-
-missdata.dropna(thresh=2)
-
-#Fill in missing data with 999
-missdata.fillna(999)
-
-# For detials, please see 
-# https://www.tutorialspoint.com/python_pandas/python_pandas_missing_data.htm
-# https://chrisalbon.com/python/data_wrangling/pandas_missing_data/
-
 #---BASE GRAPHICS USING SEABORN---
 
 import seaborn as sns
@@ -733,8 +681,10 @@ sns.scatterplot(x="pretest", y="posttest", data=mydata100);
 sns.regplot(x="pretest", y="posttest", data=mydata100)
 
 # Histogram
+
+sns.distplot(mydata100['posttest'])
+
 from scipy.stats import norm
-sns.distplot(mydata100['posttest'], fit=norm)
 # Get rid of kernel fit
 sns.distplot(mydata100['posttest'], fit=norm, kde=False)
 
@@ -773,11 +723,9 @@ mydata.to_csv( r'C:\Users\XZHU8\Documents\test.csv')
 
 mydata.to_excel('test.xls', index=False)
 
-# see https://www.statsmodels.org/dev/stats.html
-
 # ---In a New Browser Tab---
 #
-# http://workshop.utk.edu
+# https://workshop.utk.edu/feedback.php
 
 # --- QUESTIONS? ---
 
