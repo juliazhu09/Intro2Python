@@ -183,7 +183,7 @@ print(os.getcwd()) # Prints the working directory
 # python path use "/" or "\\" instead of "\"
 # put a r before the path string without using / or \\.
 
-os.chdir(r"C:\Users\XZHU8\Documents\python4stats") # Provide the path here
+os.chdir(r"C:\Users\XZHU8\Documents\Intro2python") # Provide the path here
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
@@ -494,7 +494,7 @@ for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
 i = 0
 while i < 10:
     print(str(i) + " is less than 10")
-    i =  i + 1
+    i = i + 1
 
 i
 # If we left out the increment, 1 could always be <10,
@@ -551,6 +551,7 @@ df['q1'] = [1, 2, 2, 3, 4, 5, 5, 4]
 # Add a column from another dataframe's variable.
 df['q2'] = mydata['q2']
 df[['q3','q4']] = mydata[['q3','q4']]
+df
 
 # Create some columns based on the other columns.
 df['diff'] = df['q1'] - df['q2']
