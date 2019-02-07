@@ -7,11 +7,11 @@
 # ---HOW TO PREPARE YOUR COMPUTER---
 #       FOR THIS WORKSHOP
 #
-# ---STEP 1. INSTALLING RODEO ---
-# What is Rodeo?
+# ---STEP 1. INSTALLING SPYDER ---
+# What is Spyder?
 # A PYTHON IDE BUILT FOR ANALYZING DATA.
-# Install Rodeo from this sites:
-# https://www.yhat.com/products/rodeo
+# Install Spyder from this sites:
+# https://www.spyder-ide.org/
 
 # ---STEP 2. STORE WORKSHOP FILES---
 #
