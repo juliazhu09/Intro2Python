@@ -2,7 +2,7 @@
 #    === Python Programming Basics ===
 #    ===      Xiaojuan Zhu         ===
 #    ===      xzhu8@utk.edu        ===
-#    =================================  
+#    =================================
 
 # ---HOW TO PREPARE YOUR COMPUTER---
 #       FOR THIS WORKSHOP
@@ -18,21 +18,21 @@
 # In your "Documents" folder,
 # create a new folder named "Intro2Python"
 # unzip the files and store them there.
-# 
+#
 # Run Spyder and open Intro2Python.py file.
 
 # ---STEP 3. INSTALL ADD-ON PACKAGES---
-#       
-# A Python package refers to a directory of Python 
-# module(s). A module in python is a .py file that 
-# defines one or more function/classes which you 
+#
+# A Python package refers to a directory of Python
+# module(s). A module in python is a .py file that
+# defines one or more function/classes which you
 # intend to reuse in different codes of your program.
-# Use PIP to install a package either in a command prompt 
-# window or in the python command line.
-# To use them, we import them. Submodeles can be stored 
+# Use PIP to install a package either in a command prompt
+# window or in the python command line, or in Anaconda.
+# To use them, we import them. Submodeles can be stored
 # in packages, and accessed with dot syntax.
-# Some packages, such as sys and os, have already installed
-# in python, you do not need to install again. We can import
+# Some packages, such as sys and os, have already been installed
+# in python, you do not need to install it again. We can import
 # it directly.
 # Official Python description of modules and importing them:
 # https://docs.python.org/2/tutorial/modules.html
@@ -45,16 +45,16 @@ print(sys.executable)
 # For example:
 # C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn patsy statsmodels
 
-# If you want to update the python path, 
+# If you want to update the python path,
 # click Tools -> Preference.
-# Find the Python interpreter and click 
+# Find the Python interpreter and click
 # Check Use the following python interpreter
 
 # Start Spyder, and open this file by
 # going to the "File" menu and choosing
-# "Open file". 
+# "Open file".
 # Use pip.main(['install', 'Library name')
-# function to install a package. Select the following 
+# function to install a package. Select the following
 # lines and click "Run Line".
 # Do this only one time after you install Spyder:
 import pip
@@ -65,7 +65,7 @@ print("pip", pip.__version__)
 # install seaborn, pasty and statsmodels packages
 pip.main(['install', 'numpy', 'scipy', 'seaborn', 'patsy', 'statsmodels'])
 
-# If pip's version is more than 10.0, like current is 18.0, 
+# If pip's version is more than 10.0, like current is 18.0,
 # use the following code to install seaborn, pasty and statsmodels.
 from pip._internal import main
 main(['install', 'numpy', 'scipy', 'seaborn', 'patsy', 'statsmodels'])
@@ -74,9 +74,10 @@ main(['install', 'numpy', 'scipy', 'seaborn', 'patsy', 'statsmodels'])
 import pip
 # pip version <10.0, upgrade a package, like pip
 pip.main(['install', '--upgrade', 'pip'])
+
 # pip version >=10.0, upgrade a package, like seaborn
 from pip._internal import main
-main(['install', '--upgrade', 'seaborn'])
+main(['install', '--upgrade', 'pip'])
 
 # Show all of the packages installed under Python
 import pkg_resources
@@ -111,11 +112,11 @@ print('Statsmodels version ' + sms.__version__)
 
 # ---GOOD SOURCES OF PYTHON HELP---
 #
-# UT people get 15 hours per semester of 
+# UT people get 15 hours per semester of
 # free help in 540 Greve Hall:
 #
 #   HelpDesk: 974-9900
-#   Walk-in Schedule: 
+#   Walk-in Schedule:
 #   http://oit.utk.edu/research/schedule
 #
 # Python & R cheat sheets: https://www.datacamp.com/community/data-science-cheatsheets?page=3
@@ -125,27 +126,27 @@ print('Statsmodels version ' + sms.__version__)
 # ---RUNNING PYTHON COMMANDS---
 #
 # As you've done above, you can
-# Use File> Open or File> New 
-# to enter Python commands into a 
+# Use File> Open or File> New
+# to enter Python commands into a
 # "script" file and run them.
 #
 # You can also enter commands one at a time
-# in the terminal window at the bottom left.
-# Do this sparingly as you can't save 
+# in the terminal window at the bottom right.
+# Do this sparingly as you can't save
 # commands easily.
 
 # ---TERMINAL WINDOW PROMPTS---
 #
-# ">>>" is the standard command prompt 
+# ">>>" is the standard command prompt
 #
 # "..." is the prompt when continuing on a new line
 #
-# If you see "..." prompt when not trying to 
+# If you see "..." prompt when not trying to
 # continue, look for a missing ")"
 #
-# To get rid of an unexpected "..." continuation 
+# To get rid of an unexpected "..." continuation
 # prompt
-#   -Submit the missing piece of the command, or 
+#   -Submit the missing piece of the command, or
 #    use Ctrl+C
 
 
@@ -157,12 +158,12 @@ print('Statsmodels version ' + sms.__version__)
 # ---IMPORTING A PACKAGE TO PYTHON ---
 #
 # You only install a package once,
-# but you need to import it from the package 
+# but you need to import it from the package
 # each time when you start python
 #
-# I do it repeatedly in this workshop to 
+# I do it repeatedly in this workshop to
 # emphasize that a package is being used.
-# 
+#
 import pandas as pd
 import matplotlib
 import numpy as np
@@ -181,38 +182,46 @@ print(os.getcwd()) # Prints the working directory
 # Set the working directory:
 
 # python path use "/" or "\\" instead of "\"
-# put a r before the path string without using / or \\.
+# put a r in front of the path string without using / or \\.
 
 os.chdir(r"C:\Users\XZHU8\Documents\Intro2python") # Provide the path here
+
+# if your run spyder on Apps.utk.edu, use the code below
+os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
+# if "r"\\client\C$" does not work.
+os.chdir(r"I:\Classes\OIT_Training\Intro to Python")
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
 
 # Show the work directory again:
-print(os.getcwd()) 
+print(os.getcwd())
 
-# ---ASSIGNMENT OPERATOR--- 
+# ---ASSIGNMENT OPERATOR---
 #
 # When creating objects, you give them
 # values using the assignment operator
 # "=" as here:
-
+import pandas as pd
 mydata = pd.read_csv("mydata.csv")
 mydata.head()
-
+mydata
 #---PYTHON VARIABLES---
 #
 # Python's variable Types:
 # Number (int, long, float, Complex)
 # String
-# Boolean
+# Boolean: Ture of False
 # List
 # Tuple
 # Dictionary
 # We focus on list today. For details, see
 # https://www.tutorialspoint.com/python/python_variable_types.htm
 # Example
-x =  1 
+x =  1
+type(x)
+
+x=1.2
 type(x)
 
 a = "string"
@@ -238,7 +247,7 @@ plt.show()
 # but immutable, and usually used for smaller sequences
 # of things that are related to each other.
 # Think of Cartesian coordinates:(x, y, z)
-# The differences between tuples and lists are, the tuples cannot be changed 
+# The differences between tuples and lists are, the tuples cannot be changed
 # unlike lists and tuples use parentheses, whereas lists use square brackets.
 aTuple = ("foo", "bar")
 len(aTuple)
@@ -246,17 +255,19 @@ len(aTuple)
 # Following action is not valid for tuples
 # aTuple[0] = 100
 aTuple[0] = 100
+aTuple[2] = 100
 # list can be changed.
 alist=["foo", "bar"]
 alist[0] = 100
+
 alist
 
 # Dicitonairy: A collection of variables indexed by other, "key" variables.
-# Instead of using numeric or default index in python, if you want to 
+# Instead of using numeric or default index in python, if you want to
 # create your own index, you need to use dictionary.
 aDict = {}
 aDict["a"] = 364936
-aDict["b"] = 12.4 
+aDict["b"] = 12.4
 aDict[7] = "hi"
 
 aDict
@@ -264,7 +275,7 @@ aDict["a"]
 aDict["b"]
 aDict[7]
 
-# Keywords: reserved words in python. 
+# Keywords: reserved words in python.
 # Cannot be used as a variable name.
 import keyword
 print(keyword.kwlist)
@@ -274,22 +285,22 @@ print(keyword.kwlist)
 # Python is object oriented
 #
 # Everything: data, functions (procedures), models,
-# etc. are objects, with its properties/attributes 
+# etc. are objects, with its properties/attributes
 # and methods/functions.
 #
-# The object names should begin with a letter 
-# and can contain letters, numbers, 
-# underscores. 
-# But cannot have space or period. 
+# The object names should begin with a letter
+# and can contain letters, numbers,
+# underscores.
+# But cannot have space or period.
 # Case matters, e.g. myvar is not MyVar
-# 
-
-# ---OBJECT ATTRIBUTES AND METHODS--- 
 #
-# To access an attributes or a method, use dot syntax. 
+
+# ---OBJECT ATTRIBUTES AND METHODS---
+#
+# To access an attributes or a method, use dot syntax.
 mydata.workshop
 
-# For example, mean() is a method of a dataframe 
+# For example, mean() is a method of a dataframe
 mydata.mean()
 
 # list all the attributes and methods of mydata.
@@ -297,13 +308,13 @@ dir(mydata)
 
 # ---PYTHON FUNCTIONS---
 
-# As you already know, Python gives you many built-in 
+# As you already know, Python gives you many built-in
 # functions e.g. print(mydata), dir(), type()
 
 # When you use a function, you "call" its name.
 #
 # print() is the default function
-#   so this function call:  print(q1) 
+#   so this function call:  print(q1)
 
 print(mydata)
 
@@ -324,6 +335,9 @@ np.sum(np.log(mydata['q1']))
 
 # ---USER-DEFINED FUNCTIONS---
 #
+# A function statement starts with the def keyworkd, followed by
+# the function name, parameters and keywords.
+#
 # Parameters/keywords in a function are called "arguments"
 # Arguments follow function name in parentheses
 # and are separated by commas
@@ -331,18 +345,18 @@ np.sum(np.log(mydata['q1']))
 # In python, user-defined functions can take four
 # different types of arguments. The argument types
 # and their meanings, however, are pre-defined and
-# can’t be changed. a function is defined using 
+# can’t be changed. A function is defined using
 # the def keyword, and use indentation
 # to define the content of the function.
 # The content indents four spaces.
-# Use Tab key as the shortcut 
-# The colon is used to declare the start of an indented block. 
+# Use Tab key as the shortcut
+# The colon is used to declare the start of an indented block.
 # When we need to use indentation:
 #    if/else statement
 #    for/while statement
 #    def statement
-#    class statement 
-# 
+#    class statement
+#
 # example:
 def my_function():
   print("Hello from a function")
@@ -353,18 +367,20 @@ my_function()
 # examples
 def my_function_with_args(username, greeting):
     print("Hello, {} , From My Function!, I wish you {}!".format(username, greeting))
-    
+
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
 
 #---FUNCTION OUTPUT---
-#  
-#  Returning a value from a function, Not only can 
-#  you pass a parameter value into a function, a function 
+#
+#  Returning a value from a function, Not only can
+#  you pass a parameter value into a function, a function
 #  can also produce a value, i.e., Output.
-#  For example, 
+#  For example,
+
 len(id)
+
 #
 #  That value is a single object that may contain
 #  much information (e.g. data frame, list)
@@ -380,28 +396,28 @@ result
 
 #---CONDITION STATEMENTS---
 #
-# In the real world, we commonly must evaluate information 
+# In the real world, we commonly must evaluate information
 # around us and then choose one course of action or another
 # based on what we observe: For example,
 #
 # If the weather is nice, then I’ll mow the lawn.
 # Otherwise, I won’t mow.
 #
-#   if/else-statement 
-#   if/elif/else-statement 
+#   if/else-statement
+#   if/elif/else-statement
 #
-# Blocks of code under if statements are executed as long 
+# Blocks of code under if statements are executed as long
 # as the stated condition is true.
 # Can have elif (which is a contraction of "else if") and/or
-# else statements associated, when the condition is not true. 
+# else statements associated, when the condition is not true.
 
 # Here is an if/else-statement example:
 weather = str(input('How is the weather today, nice or not? '))
-if weather == "nice":           
+if weather == "nice":
     print('I will mow the Lawn')
 else:
     print("I won't mow the Lawn")
-    
+
 
 # If/elif/else statement example,
 i = 1
@@ -414,8 +430,8 @@ else:
     print("neither!")
 
 # Create a function
-    
-def checkNumber(i, j): 
+
+def checkNumber(i, j):
     if i + j == 3:
         print("three")
     elif i + j == 2:
@@ -441,17 +457,17 @@ checkNumber(10, 1)
 
 # --- ITERATION---
 #
-# Iteration is typically done by means of a loop, 
+# Iteration is typically done by means of a loop,
 # being a piece of code that is executed repeatedly.
-# We can control how often a loop repeats, or whether it repeats at all, 
-# with control flow statements, which evaluates conditions. 
-# Control flow statements can control more than just loops. 
+# We can control how often a loop repeats, or whether it repeats at all,
+# with control flow statements, which evaluates conditions.
+# Control flow statements can control more than just loops.
 # For more control flow statements, see
 # https://docs.python.org/2.7/tutorial/controlflow.html
 
 # --FOR STATEMENT---
 #
-# Blocks of code under for statements repeat themselves for each 
+# Blocks of code under for statements repeat themselves for each
 # elements of some iterable object. They make a for loop.
 # Iterable objects are those that have a defined sequence of zero or more objects.
 # e.g. lists, strings, tuples, etc.
@@ -468,33 +484,39 @@ for l in aText:
 
 #---RANGE FUNCTION---
 #
-# Often we want to repeat an action some specified number of 
+# Often we want to repeat an action some specified number of
 # times, rather than over a collection of objects.
 # The range() function returns an iterable object of numbers, of size
 #(and optionally, starting value and increment) you ask for. In python,
 # we iterate on that.
-# Ask for a range of itegers, starting at zero and ending before 7. 
+# Ask for a range of itegers, starting at zero and ending before 7.
 aRange =  range(7)
 for i in aRange:
     print(str(i))
+
 
 for i in range(3, 7): # start at 3 end before 7
     print(str(i))
 
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
-    print(str(i)) 
-    
+    print(str(i))
+
 
 # ---WHILE STATEMENT ---
+#
+# Sometimes we use a condition statment to control the number of times
+# a loop repeated. As long as the condistion is true, the program
+# will repeated execute. So we need to use while statement.
 # Blocks of code under while statements repeat themselves until a
 # specified condition is detected as false - they make a while loop.
 # Before the indented block is (re)run, the condition is evaluated. It
-# runs only if the condition is true. 
+# runs only if the condition is true.
 
 i = 0
 while i < 10:
     print(str(i) + " is less than 10")
     i = i + 1
+
 
 i
 # If we left out the increment, 1 could always be <10,
@@ -508,7 +530,7 @@ img=mpimg.imread('Capture.jpg')
 imgplot = plt.imshow(img)
 plt.show()
 
-####################################### 
+#######################################
 #### WORKING WITH DATA USING PYTHON ###
 #######################################
 #
@@ -525,7 +547,7 @@ zip?
 mydatalist = list(zip(id, workshop, gender))
 # show mydatatest
 mydatalist
-# use pandas to create df as a data frame object. 
+# use pandas to create df as a data frame object.
 import pandas as pd
 df = pd.DataFrame(data = mydatalist, columns=['id', 'workshop', 'gender'])
 
@@ -534,14 +556,14 @@ df.dtypes
 
 # Check data type of id column
 df.id.dtype
-df.workshop.dtype
+df.gender.dtype
 
 # ---DATA MODIFICATION---
 
 # Add a new column
 df['newcol'] = 5
 df
-# rename a column 
+# rename a column
 df = df.rename(columns = {'newcol':'rev'})
 df.columns    # return all the column names
 
@@ -571,6 +593,7 @@ df
 # Use index to subset simliar to R
 df.loc[0:4, 'meanQ']  #df.loc: Access group of values using labels
 df.iloc[0:5, 10]      #df.iloc: Access group of rows and columns by integer position(s)
+df.iloc[:5, 10]
 
 # ---TABLE OF TRANFORMATIONS---
 #
@@ -578,13 +601,13 @@ df.iloc[0:5, 10]      #df.iloc: Access group of rows and columns by integer posi
 # Subtraction	     x-y
 # Multiplication	 x*y
 # Dividison          x/y
-# Antilog, base 10   10**x 
+# Antilog, base 10   10**x
 # Antilog, Natural   numpy.exp(x)
 # Division	         x/y
-# Exponentiation	 x**2 
-# Logarithm, base 10 numpy.log10(x) 
-# Logarithm, Natural numpy.log(x) 
-# Round off	         round(x) 
+# Exponentiation	 x**2
+# Logarithm, base 10 numpy.log10(x)
+# Logarithm, Natural numpy.log(x)
+# Round off	         round(x)
 # Square Root	     numpy.sqrt(x)
 
 # --- BASIC DESCRIPTIVE ANALYSIS---
@@ -601,14 +624,14 @@ df.describe()
 #
 # df is a data frame
 df.mode()
-df['q1'].mode() 
+df['q1'].mode()
 
 #Return the count/frequency for each level
 df['gender'].value_counts()
 
 #---TRANSFORM TO NUMERIC VARIABEL---
 
-mydata.dtypes # data.frame, 
+mydata.dtypes # data.frame,
 # check a variable's type.
 mydata['q3'].dtype
 
@@ -618,8 +641,8 @@ mydata['q3'].dtype
 mydata['q3']
 
 # ---CREATING SUBSETS USING PANDAS ---
-#Select the oberservations for a new dataset, 
-#if the observationsmeet a condition.
+#Select the oberservations for a new dataset,
+#if the observations meet a condition.
 import pandas as pd
 mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
 print(mydata100[:6])
@@ -639,6 +662,8 @@ femaleQs
 
 # Not valid below
 femaleQs = females['q1':'q4']
+
+femaleQs = females.loc['q1':'q4']
 
 # Use index to subset the data, similar to R
 femaleQsloc = mydata100.loc[mydata100['gender']=='Female', 'q1':'q4']
@@ -674,10 +699,10 @@ ax = sns.boxplot(x="workshop", y="posttest", hue="gender",
 # Scatterplot
 
 sns.set_style("whitegrid")
-sns.scatterplot(x="pretest", y="posttest", data=mydata100);
-# Draw a scatterplot of two variables, x and y, 
-# and then fit the regression model y ~ x 
-# and plot the resulting regression line 
+sns.scatterplot(x="pretest", y="posttest", data=mydata100)
+# Draw a scatterplot of two variables, x and y,
+# and then fit the regression model y ~ x
+# and plot the resulting regression line
 # and a 95% confidence interval for that regression:
 sns.regplot(x="pretest", y="posttest", data=mydata100)
 
@@ -689,7 +714,7 @@ from scipy.stats import norm
 # Get rid of kernel fit
 sns.distplot(mydata100['posttest'], fit=norm, kde=False)
 
-# For many more examples, 
+# For many more examples,
 # see: https://seaborn.pydata.org/tutorial.html
 
 # ---LISTING OBJECTS IN YOUR WORKSPACE---
@@ -705,9 +730,9 @@ dir()
 # The del() function deletes (ReMoves) objects
 del(df)
 df
- 
+
 # You can remove a list using:
-# del list 
+# del list
 
 del gender
 gender
@@ -724,9 +749,8 @@ mydata.to_csv( r'C:\Users\XZHU8\Documents\test.csv')
 
 mydata.to_excel('test.xls', index=False)
 
+# --- QUESTIONS? ---
+
 # ---In a New Browser Tab---
 #
 # https://workshop.utk.edu/feedback.php
-
-# --- QUESTIONS? ---
-
