@@ -12,6 +12,11 @@
 # A PYTHON IDE BUILT FOR ANALYZING DATA.
 # Install Spyder from this sites:
 # https://www.spyder-ide.org/
+#
+# Spyder has three windows:
+# Syntax window: show you the python syntax, you can edit and store the syntax
+# variable explorer window: show the variables created by the syntax
+# Ipython Console window: run the python syntax and show the output 
 
 # ---STEP 2. STORE WORKSHOP FILES---
 #
