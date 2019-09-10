@@ -41,43 +41,10 @@ import sys
 print(sys.executable)
 
 # Install a package using CMD
-# Python Path\python -m pip install seaborn patsy statsmodels
+# Python Path\python -m pip install seaborn 
 # For example:
-# C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn patsy statsmodels
+# C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn 
 
-# If you want to update the python path,
-# click Tools -> Preference.
-# Find the Python interpreter and click
-# Check Use the following python interpreter
-
-# Start Spyder, and open this file by
-# going to the "File" menu and choosing
-# "Open file".
-# Use pip.main(['install', 'Library name')
-# function to install a package. Select the following
-# lines and click "Run Line".
-# Do this only one time after you install Spyder:
-import pip
-
-# Check the version of pip
-print("pip", pip.__version__)
-# If pip's version is under 10.0, use the following code to
-# install seaborn, pasty and statsmodels packages
-pip.main(['install', 'numpy', 'scipy', 'seaborn', 'patsy', 'statsmodels'])
-
-# If pip's version is more than 10.0, like current is 18.0,
-# use the following code to install seaborn, pasty and statsmodels.
-from pip._internal import main
-main(['install', 'numpy', 'scipy', 'seaborn', 'patsy', 'statsmodels'])
-
-# Update a pacakge installed using pip
-import pip
-# pip version <10.0, upgrade a package, like pip
-pip.main(['install', '--upgrade', 'pip'])
-
-# pip version >=10.0, upgrade a package, like seaborn
-from pip._internal import main
-main(['install', '--upgrade', 'pip'])
 
 # Show all of the packages installed under Python
 import pkg_resources
@@ -100,7 +67,7 @@ import matplotlib
 import numpy as np
 import scipy as sp
 import seaborn as sns
-import statsmodels as sms
+
 
 print('Python version ' + sys.version)
 print('Pandas version: ' + pd.__version__)
@@ -108,7 +75,7 @@ print('Matplotlib version ' + matplotlib.__version__)
 print('Numpy version: ' + np.__version__)
 print('Scipy version: ' + sp.__version__)
 print('Seaborn version ' + sns.__version__)
-print('Statsmodels version ' + sms.__version__)
+
 
 # ---GOOD SOURCES OF PYTHON HELP---
 #
@@ -164,10 +131,9 @@ print('Statsmodels version ' + sms.__version__)
 # I do it repeatedly in this workshop to
 # emphasize that a package is being used.
 #
+import os
+import sys
 import pandas as pd
-import matplotlib
-import numpy as np
-import seaborn as sns
 
 # ---FINDING FILES---
 #
@@ -227,6 +193,10 @@ type(x)
 a = "string"
 type(a)
 
+## exercise 1 ##
+## Write a program that assigns three variables, one each of types string, int, and float. Variable
+##  names and values can be arbitrary. Print each variable out to the screen.
+
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
 # Variables can be mixed types in a list.
@@ -243,6 +213,21 @@ import matplotlib.image as mpimg
 img=mpimg.imread('apples.png')
 imgplot = plt.imshow(img)
 plt.show()
+
+## exercise 2##
+
+# The top five highest mountain peaks on Earth, according to Wikipedia, are as follows:
+# 1) Mount Everest / Sagarmatha / Chomolungma 8,848 m
+# 2) K2 / Qogir / Godwin Austen 8,611 m
+# 3) Kangchenjunga             8,586 m
+# 4) Lhotse                    8,516 m
+# 5) Makalu                    8,485 m
+# Use five mountain names, but store them as only names in a list (you 
+# can use one name of your choice for those with multiple names). 
+# Then, print to the screen the name of Kangchenjunga by referencing 
+# its index position in the list.
+
+
 # Tuples:Like lists, contains several items enclosed within parenthesis.
 # but immutable, and usually used for smaller sequences
 # of things that are related to each other.
@@ -262,6 +247,13 @@ alist[0] = 100
 
 alist
 
+## exercise 3 ##
+
+# create a tuple use Kangchenjunga's name and height and then query the height
+# of the Kanchenjuga
+# hint:  mtn = ("K2", 8611)
+
+
 # Dicitonairy: A collection of variables indexed by other, "key" variables.
 # Instead of using numeric or default index in python, if you want to
 # create your own index, you need to use dictionary.
@@ -274,6 +266,17 @@ aDict
 aDict["a"]
 aDict["b"]
 aDict[7]
+
+## exercise 4 ##
+# Mary’s favorite candy is chocolate, Rodrigo’s favorite is bubble gum, and
+# Larry’s is gummy bears. Write a dictionary that stores, for each person, 
+# their favorite candy. Then, pick a person among the three, and, using the 
+# dictionary keys you defined, print to the screen a statement something to 
+# the effect of “Mary’s candy of choice is chocolate.” Make sure that your 
+# print() statement is a concatenation of some text and the result of querying 
+# your dictionary for that person’s favorite candy. 
+# Hint: print("Mary's candy of chocie is" + aDict["Mary"])
+
 
 # Keywords: reserved words in python.
 # Cannot be used as a variable name.
@@ -305,6 +308,10 @@ mydata.mean()
 
 # list all the attributes and methods of mydata.
 dir(mydata)
+
+## exercise 5 ##
+# use describe() method to get the deserptive statstics of mydata.
+# hint: describe() is a method stored in the mydata.
 
 # ---PYTHON FUNCTIONS---
 
@@ -371,6 +378,12 @@ def my_function_with_args(username, greeting):
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
+##  exercies 6 ##
+# Define a function that will print the string “Hello X!” to the screen, where
+# X is a name passed to the function as an argument. Then, call your function, 
+# having it greet you by name.
+# Hint: string = "Hello" + aName + "!"
+
 
 #---FUNCTION OUTPUT---
 #
@@ -393,6 +406,13 @@ def square(x):
 result = square(10)
 result
 # Notice: Cannot use print to return a value
+
+## exercies 7 ##
+# write a function that will return a person's BMI, where height and weight are
+# two names passed to the function as the argument. Then call your function to 
+# compute a person's BMI with heigh of 1.6 and weight is 75kg. 
+# Hint: BMI = weight / (height * height)
+
 
 #---CONDITION STATEMENTS---
 #
@@ -441,6 +461,21 @@ def checkNumber(i, j):
 
 checkNumber(1, 1)
 checkNumber(10, 1)
+
+## exercise 8 ##
+# Import the random module, and use the random function in it that gives you
+# a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
+# decimal places using round() print to the screen a message saying the
+# number is odd or even. Part of the code are shown below,
+import random
+# generate a random number
+n = random.random()
+ni = round(n*1000.0, 0)
+m = ni % 2 # Modulo (%) calculates the remainder after division.
+if ():
+    print()
+else:
+    print()
 
 # ---TABLE OF LOGICAL COMPARISONS---
 #
@@ -500,6 +535,14 @@ for i in range(3, 7): # start at 3 end before 7
 
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
     print(str(i))
+    
+## exercise 9 ## 
+# Use the range() function to do exercise 8 five times. 
+import random
+# generate a random number
+aRange= range()
+for i in aRange:
+
 
 
 # ---WHILE STATEMENT ---
@@ -516,12 +559,24 @@ i = 0
 while i < 10:
     print(str(i) + " is less than 10")
     i = i + 1
-
-
 i
 # If we left out the increment, 1 could always be <10,
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
+
+## exercise 10 ##
+# To make things concrete and numerical, suppose the following: 
+# The tea starts at 115 degrees Fahrenheit. You want it at 112 degrees.
+# A chip of ice turns out to lower the temperature one degree each time. 
+# You test the temperature each time, and also print out the temperature 
+# before reducing the temperature. In Python you could write and run the code
+# below, saved in example program cool.py:
+temperature = 115  
+while temperature ?: # first while loop code
+    print(temperature)
+    ?
+    
+print('The tea is cool enough.')
 
 #---QUESTIONS?---
 import matplotlib.pyplot as plt
@@ -530,153 +585,18 @@ img=mpimg.imread('Capture.jpg')
 imgplot = plt.imshow(img)
 plt.show()
 
-#######################################
-#### WORKING WITH DATA USING PYTHON ###
-#######################################
-#
-# ---CREATE A DATAFRAME MANUALLY---
-# First, we create three list variables.
-id = [1, 2, 3, 4, 5, 6, 7, 8]
-workshop = [1, 2, 1, 2, 1, 2, 1, 2]
-gender = ['f', 'f', 'f', ''  ,'m', 'm', 'm', 'm',]
-
-# Merge these three lists together we will use the zip function
-help(zip)
-zip?
-
-mydatalist = list(zip(id, workshop, gender))
-# show mydatatest
-mydatalist
-# use pandas to create df as a data frame object.
-import pandas as pd
-df = pd.DataFrame(data = mydatalist, columns=['id', 'workshop', 'gender'])
-
-# Check data type of the columns
-df.dtypes
-
-# Check data type of id column
-df.id.dtype
-df.gender.dtype
-
-# ---DATA MODIFICATION---
-
-# Add a new column
-df['newcol'] = 5
-df
-# rename a column
-df = df.rename(columns = {'newcol':'rev'})
-df.columns    # return all the column names
-
-# add a column from a list
-df['q1'] = [1, 2, 2, 3, 4, 5, 5, 4]
-
-# Add a column from another dataframe's variable.
-df['q2'] = mydata['q2']
-df[['q3','q4']] = mydata[['q3','q4']]
-df
-
-# Create some columns based on the other columns.
-df['diff'] = df['q1'] - df['q2']
-df['ratio'] = df['q1'] / df['q2']
-df['meanQ'] = (df['q1'] + df['q2'] )/2
-
-# Log transform
-import numpy as np
-df['logq1'] = np.log(df['q1'])
-df
-
-# look at the first 5 rows of a column:
-df['meanQ'][:5]
-df.meanQ[:5]
-df[:5]['meanQ']
-df
-# Use index to subset simliar to R
-df.loc[0:4, 'meanQ']  #df.loc: Access group of values using labels
-df.iloc[0:5, 10]      #df.iloc: Access group of rows and columns by integer position(s)
-df.iloc[:5, 10]
-
-# ---TABLE OF TRANFORMATIONS---
-#
-# Addition           x+y
-# Subtraction	     x-y
-# Multiplication	 x*y
-# Dividison          x/y
-# Antilog, base 10   10**x
-# Antilog, Natural   numpy.exp(x)
-# Division	         x/y
-# Exponentiation	 x**2
-# Logarithm, base 10 numpy.log10(x)
-# Logarithm, Natural numpy.log(x)
-# Round off	         round(x)
-# Square Root	     numpy.sqrt(x)
-
-# --- BASIC DESCRIPTIVE ANALYSIS---
-df.mean()
-df.sum()
-df.max()
-df.min()
-df['q2'].mean()
-# return all numeric variables' descriptive statstics
-df.describe()
-
-# We saw describe get frequencies on
-# workshop and mean, sd, on q variables
-#
-# df is a data frame
-df.mode()
-df['q1'].mode()
-
-#Return the count/frequency for each level
-df['gender'].value_counts()
-
-#---TRANSFORM TO NUMERIC VARIABEL---
-
-mydata.dtypes # data.frame,
-# check a variable's type.
-mydata['q3'].dtype
-
-#Convert q3 from object/catergorical to numeric
-mydata['q3'] = pd.to_numeric(mydata['q3'], errors='coerce') #If ‘coerce’, then invalid parsing will be set as NaN
-mydata['q3'].dtype
-mydata['q3']
-
-# ---CREATING SUBSETS USING PANDAS ---
-#Select the oberservations for a new dataset,
-#if the observations meet a condition.
-import pandas as pd
-mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
-print(mydata100[:6])
-
-# Subset selects rows
-mydata100['gender'] =='Female'
-
-females = mydata100[mydata100['gender'] =='Female']
-females
-
-femalesr = mydata100[(mydata100['gender'] =='Female') & (mydata100['workshop'] == 'R')]
-femalesr
-
-# selecting vars from subset of females
-femaleQs = females[['q1','q2','q3','q4']]
-femaleQs
-
-# Not valid below
-femaleQs = females['q1':'q4']
-
-femaleQs = females.loc['q1':'q4']
-
-# Use index to subset the data, similar to R
-femaleQsloc = mydata100.loc[mydata100['gender']=='Female', 'q1':'q4']
-femaleQsloc
-
-
-# More details about subsetting data, see
-# https://stackoverflow.com/questions/10665889/how-to-take-column-slices-of-dataframe-in-pandas
-
 #---BASE GRAPHICS USING SEABORN---
 
 import seaborn as sns
 import matplotlib
+import pandas as pd
+
+mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
+print(mydata100[:6])
+
+import pandas as pd
+mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
+print(mydata100[:6])
 
 # Barplot
 
