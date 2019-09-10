@@ -7,6 +7,6 @@ Welcome to Intro2Python workshop!
     
 2. Create a folder named "Intro2Python" in My Documents. The path should be C:\Users\Name\Documents\Intro2Python.
 
-3. Click the Clone button on the upper right window of the Github website to download a zip file. Unzip the zip file and extract all the files to "Intro2Python" folder.
+3. Click the green "Clone or Download" button on the Intro2Python Github website to download a zip file. Unzip the zip file and extract all the files to "Intro2Python" folder.
 
 4. Open Spyder->File->Open->Intro2Pyton.py
