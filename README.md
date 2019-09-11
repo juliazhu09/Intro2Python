@@ -8,6 +8,6 @@ Welcome to Intro2Python workshop!
     
 2. Click the green "Clone or Download" button on the Intro2Python Github website to download a zip file. 
 
-3. Unzip the zip file and extract all the files to "Documents" folder. A folder named "Intro2Python-master" is created under Documents folder.
+3. Unzip the zip file and extract all the files to "Documents" folder. A folder named \b"Intro2Python-master" is created under Documents folder.
 
 4. Open Spyder->File->Open->Intro2Pyton.py
