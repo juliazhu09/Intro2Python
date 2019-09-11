@@ -45,9 +45,16 @@
 import sys
 print(sys.executable)
 
-# Install a package using CMD
-# Python Path\python -m pip install seaborn 
+# Install a package using Anaconda Prompt
+# python -m pip install pacakagename 
 # For example:
+# python -m pip install seaborn
+
+# For apps user to install a package, go to OIT Knowledge Base for instruction
+# https://help.utk.edu/kb/index.php?func=show&e=2473
+
+# Install a package using windows CMD 
+# Python Path/python -m pip install pacakagename 
 # C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn 
 
 
@@ -177,8 +184,35 @@ import pandas as pd
 mydata = pd.read_csv("mydata.csv")
 mydata.head()
 mydata
-#---PYTHON VARIABLES---
+
+# ---OBJECTS & THEIR NAMES---
 #
+# Python is object oriented
+#
+# Everything: data, functions (procedures), models,
+# etc. are objects, with its properties/attributes
+# and methods/functions.
+#
+# The object names should begin with a letter
+# and can contain letters, numbers,
+# underscores.
+# But cannot have space or period.
+# Case matters, e.g. myvar is not MyVar
+#
+
+# ---OBJECT ATTRIBUTES AND METHODS---
+#
+# To access an attributes or a method, use dot syntax.
+mydata.workshop
+
+# For example, mean() is a method of a dataframe
+mydata.mean()
+
+# list all the attributes and methods of mydata.
+dir(mydata)
+
+#---PYTHON VARIABLES---
+# 
 # Python's variable Types:
 # Number (int, long, float, Complex)
 # String
@@ -231,6 +265,7 @@ plt.show()
 # can use one name of your choice for those with multiple names). 
 # Then, print to the screen the name of Kangchenjunga by referencing 
 # its index position in the list.
+# Hint Mtn = ["K2",  ,  , ]
 
 
 # Tuples:Like lists, contains several items enclosed within parenthesis.
@@ -245,7 +280,7 @@ len(aTuple)
 # Following action is not valid for tuples
 # aTuple[0] = 100
 aTuple[0] = 100
-aTuple[2] = 100
+
 # list can be changed.
 alist=["foo", "bar"]
 alist[0] = 100
@@ -280,7 +315,8 @@ aDict[7]
 # the effect of “Mary’s candy of choice is chocolate.” Make sure that your 
 # print() statement is a concatenation of some text and the result of querying 
 # your dictionary for that person’s favorite candy. 
-# Hint: print("Mary's candy of chocie is" + aDict["Mary"])
+# Hint: adict = {"Mary": "Chocolate"}
+# print("Mary's candy of chocie is" + aDict["Mary"])
 
 
 # Keywords: reserved words in python.
@@ -288,35 +324,6 @@ aDict[7]
 import keyword
 print(keyword.kwlist)
 
-# ---OBJECTS & THEIR NAMES---
-#
-# Python is object oriented
-#
-# Everything: data, functions (procedures), models,
-# etc. are objects, with its properties/attributes
-# and methods/functions.
-#
-# The object names should begin with a letter
-# and can contain letters, numbers,
-# underscores.
-# But cannot have space or period.
-# Case matters, e.g. myvar is not MyVar
-#
-
-# ---OBJECT ATTRIBUTES AND METHODS---
-#
-# To access an attributes or a method, use dot syntax.
-mydata.workshop
-
-# For example, mean() is a method of a dataframe
-mydata.mean()
-
-# list all the attributes and methods of mydata.
-dir(mydata)
-
-## exercise 5 ##
-# use describe() method to get the deserptive statstics of mydata.
-# hint: describe() is a method stored in the mydata.
 
 # ---PYTHON FUNCTIONS---
 
@@ -378,16 +385,17 @@ my_function()
 
 # examples
 def my_function_with_args(username, greeting):
-    print("Hello, {} , From My Function!, I wish you {}!".format(username, greeting))
+    print("Hello "+ username + "From My Function!, I wish you" + greeting + "!")
 
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
-##  exercies 6 ##
-# Define a function that will print the string “Hello X!” to the screen, where
-# X is a name passed to the function as an argument. Then, call your function, 
-# having it greet you by name.
-# Hint: string = "Hello" + aName + "!"
+##  exercies 5 ##
+# Define a function that will print the string “Today is aday!” to the screen, 
+# like Today is Thursday, where aday is a day passed to the function as an argument. 
+# Then, call your function and pass a day of the today.
+# Hint: def day_function(aday)
+#       print("Today is" + aday +"!")
 
 
 #---FUNCTION OUTPUT---
@@ -412,11 +420,14 @@ result = square(10)
 result
 # Notice: Cannot use print to return a value
 
-## exercies 7 ##
+## exercies 6 ##
 # write a function that will return a person's BMI, where height and weight are
-# two names passed to the function as the argument. Then call your function to 
-# compute a person's BMI with heigh of 1.6 and weight is 75kg. 
-# Hint: BMI = weight / (height * height)
+# two variable names passed to the function as the argument. 
+# Then call your function to compute 
+# a person's BMI with heigh of 1.6 and weight is 75kg. 
+# Hint: def BMI(weight, height):
+#    aBMI = weight / (height * height)
+    
 
 
 #---CONDITION STATEMENTS---
@@ -467,7 +478,7 @@ def checkNumber(i, j):
 checkNumber(1, 1)
 checkNumber(10, 1)
 
-## exercise 8 ##
+## exercise 7 ##
 # Import the random module, and use the random function in it that gives you
 # a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
 # decimal places using round() print to the screen a message saying the
@@ -477,10 +488,8 @@ import random
 n = random.random()
 ni = round(n*1000.0, 0)
 m = ni % 2 # Modulo (%) calculates the remainder after division.
-if ():
-    print()
-else:
-    print()
+# Plese write the if else statement below,
+
 
 # ---TABLE OF LOGICAL COMPARISONS---
 #
@@ -541,8 +550,8 @@ for i in range(3, 7): # start at 3 end before 7
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
     print(str(i))
     
-## exercise 9 ## 
-# Use the range() function to do exercise 8 five times. 
+## exercise 8 ## 
+# Use the range() function to do exercise 7 five times. 
 import random
 # generate a random number
 aRange= range()
@@ -569,7 +578,7 @@ i
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
 
-## exercise 10 ##
+## exercise 9 ##
 # To make things concrete and numerical, suppose the following: 
 # The tea starts at 115 degrees Fahrenheit. You want it at 112 degrees.
 # A chip of ice turns out to lower the temperature one degree each time. 
