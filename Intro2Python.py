@@ -165,9 +165,9 @@ print(os.getcwd()) # Prints the working directory
 os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python) # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
-os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
+os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python-master")
 # if "r"\\client\C$" does not work.
-os.chdir(r"I:\Classes\OIT_Training\Intro to Python")
+os.chdir(r"H:\Documents\Intro to Python-master")
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
