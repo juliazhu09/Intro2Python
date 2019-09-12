@@ -33,8 +33,8 @@
 # defines one or more function/classes which you
 # intend to reuse in different codes of your program.
 # Use PIP to install a package either in a command prompt
-# window or in the python command line, or in Anaconda.
-# To use them, we import them. Submodeles can be stored
+# window or in Anaconda.
+# To use them, we import them. Submodeles/functions can be stored
 # in packages, and accessed with dot syntax.
 # Some packages, such as sys and os, have already been installed
 # in python, you do not need to install it again. We can import
@@ -162,7 +162,7 @@ print(os.getcwd()) # Prints the working directory
 # python path use "/" or "\\" instead of "\"
 # put a r in front of the path string without using / or \\.
 
-os.chdir(r"C:\Users\XZHU8\Documents\Intro2python") # Provide the path here
+os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python) # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
 os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
@@ -180,9 +180,13 @@ print(os.getcwd())
 # When creating objects, you give them
 # values using the assignment operator
 # "=" as here:
+x = 1
+
 import pandas as pd
 mydata = pd.read_csv("mydata.csv")
+# show the first five lines of mydata
 mydata.head()
+# see all the rows of mydata
 mydata
 
 # ---OBJECTS & THEIR NAMES---
@@ -191,7 +195,7 @@ mydata
 #
 # Everything: data, functions (procedures), models,
 # etc. are objects, with its properties/attributes
-# and methods/functions.
+# and methods(like functions).
 #
 # The object names should begin with a letter
 # and can contain letters, numbers,
@@ -199,7 +203,6 @@ mydata
 # But cannot have space or period.
 # Case matters, e.g. myvar is not MyVar
 #
-
 # ---OBJECT ATTRIBUTES AND METHODS---
 #
 # To access an attributes or a method, use dot syntax.
@@ -226,15 +229,17 @@ dir(mydata)
 x =  1
 type(x)
 
-x=1.2
+x = 1.2
 type(x)
 
 a = "string"
 type(a)
 
 ## exercise 1 ##
-## Write a program that assigns three variables, one each of types string, int, and float. Variable
-##  names and values can be arbitrary. Print each variable out to the screen.
+## Write a program that assigns three variables, one each of types string, int,
+## and float. Variable names and values can be arbitrary. 
+## Print each variable out to the screen.
+
 
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
@@ -358,15 +363,15 @@ np.sum(np.log(mydata['q1']))
 # the function name, parameters and keywords.
 #
 # Parameters/keywords in a function are called "arguments"
-# Arguments follow function name in parentheses
-# and are separated by commas
+# Arguments are enclosed within parentheses
+# and separated by commas
 #
 # In python, user-defined functions can take four
 # different types of arguments. The argument types
 # and their meanings, however, are pre-defined and
-# can’t be changed. A function is defined using
-# the def keyword, and use indentation
-# to define the content of the function.
+# can’t be changed. 
+
+# A function use indentation to define the content of the function.
 # The content indents four spaces.
 # Use Tab key as the shortcut
 # The colon is used to declare the start of an indented block.
@@ -383,19 +388,19 @@ def my_function():
 # To call a function, use the function name followed by parenthesis:
 my_function()
 
-# examples
+# example:
 def my_function_with_args(username, greeting):
-    print("Hello "+ username + "From My Function!, I wish you" + greeting + "!")
+    print("Hello "+ username + " From My Function!, I wish you " + greeting + "!")
 
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
 ##  exercies 5 ##
-# Define a function that will print the string “Today is aday!” to the screen, 
-# like Today is Thursday, where aday is a day passed to the function as an argument. 
-# Then, call your function and pass a day of the today.
+# Define a function that will print the string “Today is 'aday'!” to the screen, 
+# like Today is Thursday!, where aday is a day passed to the function as an argument. 
+# Then, call your function and pass a day to the function.
 # Hint: def day_function(aday)
-#       print("Today is" + aday +"!")
+#       print("")
 
 
 #---FUNCTION OUTPUT---
@@ -536,7 +541,7 @@ for l in aText:
 # Often we want to repeat an action some specified number of
 # times, rather than over a collection of objects.
 # The range() function returns an iterable object of numbers, of size
-#(and optionally, starting value and increment) you ask for. In python,
+# (and optionally, starting value and increment) you ask for. In python,
 # we iterate on that.
 # Ask for a range of itegers, starting at zero and ending before 7.
 aRange =  range(7)
@@ -555,7 +560,7 @@ for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
 import random
 # generate a random number
 aRange= range()
-for i in aRange:
+for 
 
 
 
@@ -563,7 +568,7 @@ for i in aRange:
 #
 # Sometimes we use a condition statment to control the number of times
 # a loop repeated. As long as the condistion is true, the program
-# will repeated execute. So we need to use while statement.
+# will repeatedly execute. So we need to use while statement.
 # Blocks of code under while statements repeat themselves until a
 # specified condition is detected as false - they make a while loop.
 # Before the indented block is (re)run, the condition is evaluated. It
@@ -586,9 +591,9 @@ i
 # before reducing the temperature. In Python you could write and run the code
 # below, saved in example program cool.py:
 temperature = 115  
-while temperature ?: # first while loop code
+while temperature  : # first while loop code
     print(temperature)
-    ?
+    
     
 print('The tea is cool enough.')
 
@@ -608,9 +613,6 @@ import pandas as pd
 mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
 print(mydata100[:6])
 
-import pandas as pd
-mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
-print(mydata100[:6])
 
 # Barplot
 
@@ -662,14 +664,14 @@ dir()
 # ---DELETING OBJECTS---
 
 # The del() function deletes (ReMoves) objects
-del(df)
+del(mydata)
 df
 
 # You can remove a list using:
 # del list
 
-del gender
-gender
+del id
+id
 
 # ---SAVING YOUR WORK---
 #
