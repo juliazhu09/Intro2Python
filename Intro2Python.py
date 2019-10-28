@@ -147,47 +147,12 @@ import os
 import sys
 import pandas as pd
 
-# ---FINDING FILES---
-#
-# To tell Python the folder to read from or
-# write to, set your "working directory" (wd)
-#
-# This sets it from your Documents folder:
-import os
-print(os.getcwd()) # Prints the working directory
-
-
-# Set the working directory:
-
-# python path use "/" or "\\" instead of "\"
-# put a r in front of the path string without using / or \\.
-
-os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python) # Provide the path here
-
-# if your run spyder on Apps.utk.edu, use the code below
-os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python-master")
-# if "r"\\client\C$" does not work.
-os.chdir(r"H:\Documents\Intro to Python-master")
-
-# Note put "r" before the path by using "copy path" in windows
-# or use of forward slash or double backward slashes ("/" or "\\")
-
-# Show the work directory again:
-print(os.getcwd())
-
 # ---ASSIGNMENT OPERATOR---
 #
 # When creating objects, you give them
 # values using the assignment operator
 # "=" as here:
 x = 1
-
-import pandas as pd
-mydata = pd.read_csv("mydata.csv")
-# show the first five lines of mydata
-mydata.head()
-# see all the rows of mydata
-mydata
 
 # ---OBJECTS & THEIR NAMES---
 #
@@ -203,16 +168,6 @@ mydata
 # But cannot have space or period.
 # Case matters, e.g. myvar is not MyVar
 #
-# ---OBJECT ATTRIBUTES AND METHODS---
-#
-# To access an attributes or a method, use dot syntax.
-mydata.workshop
-
-# For example, mean() is a method of a dataframe
-mydata.mean()
-
-# list all the attributes and methods of mydata.
-dir(mydata)
 
 #---PYTHON VARIABLES---
 # 
@@ -320,7 +275,7 @@ aDict[7]
 # the effect of “Mary’s candy of choice is chocolate.” Make sure that your 
 # print() statement is a concatenation of some text and the result of querying 
 # your dictionary for that person’s favorite candy. 
-# Hint: adict = {"Mary": "Chocolate"}
+# Hint: aDict = {"Mary": "Chocolate"}
 # print("Mary's candy of chocie is" + aDict["Mary"])
 
 
@@ -399,7 +354,7 @@ my_function_with_args("Mary", "a great year")
 # Define a function that will print the string “Today is 'aday'!” to the screen, 
 # like Today is Thursday!, where aday is a day passed to the function as an argument. 
 # Then, call your function and pass a day to the function.
-# Hint: def day_function(aday)
+# Hint: def day_function(aday):
 #       print("")
 
 
@@ -603,6 +558,61 @@ import matplotlib.image as mpimg
 img=mpimg.imread('Capture.jpg')
 imgplot = plt.imshow(img)
 plt.show()
+
+
+# ---FINDING FILES---
+#
+# To tell Python the folder to read from or
+# write to, set your "working directory" (wd)
+#
+# This sets it from your Documents folder:
+import os
+print(os.getcwd()) # Prints the working directory
+
+
+# Set the working directory:
+
+# python path use "/" or "\\" instead of "\"
+# put a r in front of the path string without using / or \\.
+
+os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python) # Provide the path here
+
+# if your run spyder on Apps.utk.edu, use the code below
+os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python-master")
+
+
+# if "r"\\client\C$" does not work.
+os.chdir(r"I:\Classes\OIT_Training\Intro to Python")
+
+# Note put "r" before the path by using "copy path" in windows
+# or use of forward slash or double backward slashes ("/" or "\\")
+
+# Show the work directory again:
+print(os.getcwd())
+
+# Read file from the current work directory
+
+import pandas as pd
+mydata = pd.read_csv("mydata.csv")
+
+# show the first five lines of mydata
+mydata.head()
+# see all the rows of mydata
+mydata
+
+# ---OBJECT ATTRIBUTES AND METHODS---
+#
+# To access a variable or a method, use dot syntax.
+mydata.workshop
+
+# For example, mean() is a method of a dataframe
+mydata.mean()
+
+mydata.describe()
+
+# list all the attributes and methods of mydata.
+dir(mydata)
+
 
 #---BASE GRAPHICS USING SEABORN---
 
