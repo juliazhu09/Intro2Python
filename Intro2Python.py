@@ -233,7 +233,7 @@ plt.show()
 # of things that are related to each other.
 # Think of Cartesian coordinates:(x, y, z)
 # The differences between tuples and lists are, the tuples cannot be changed
-# unlike lists and tuples use parentheses, whereas lists use square brackets.
+# unlike lists, tuples use parentheses, whereas lists use square brackets.
 aTuple = ("foo", "bar")
 len(aTuple)
 
@@ -295,21 +295,7 @@ print(keyword.kwlist)
 # print() is the default function
 #   so this function call:  print(q1)
 
-print(mydata)
-
-# ---NESTING FUNCTIONS---
-#
-# You can create a variable in
-# one step and use it in others
-#
-import numpy as np
-mydata['logq1'] = np.log(mydata['q1'])
-np.sum(mydata['logq1'])
-#
-# or you can "nest" one function
-# call within another:
-#
-np.sum(np.log(mydata['q1']))
+print("hello world")
 
 
 # ---USER-DEFINED FUNCTIONS---
@@ -355,7 +341,7 @@ my_function_with_args("Mary", "a great year")
 # like Today is Thursday!, where aday is a day passed to the function as an argument. 
 # Then, call your function and pass a day to the function.
 # Hint: def day_function(aday):
-#       print("")
+#          print("")
 
 
 #---FUNCTION OUTPUT---
@@ -365,7 +351,7 @@ my_function_with_args("Mary", "a great year")
 #  can also produce a value, i.e., Output.
 #  For example,
 
-len(id)
+len(aDict)
 
 #
 #  That value is a single object that may contain
@@ -384,7 +370,7 @@ result
 # write a function that will return a person's BMI, where height and weight are
 # two variable names passed to the function as the argument. 
 # Then call your function to compute 
-# a person's BMI with heigh of 1.6 and weight is 75kg. 
+# a person's BMI with heigh of 1.6m and weight is 75kg. 
 # Hint: def BMI(weight, height):
 #    aBMI = weight / (height * height)
     
@@ -575,7 +561,7 @@ print(os.getcwd()) # Prints the working directory
 # python path use "/" or "\\" instead of "\"
 # put a r in front of the path string without using / or \\.
 
-os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python) # Provide the path here
+os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python-master") # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
 os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python-master")
@@ -604,7 +590,7 @@ mydata
 #
 # To access a variable or a method, use dot syntax.
 mydata.workshop
-
+mydata['workshop']
 # For example, mean() is a method of a dataframe
 mydata.mean()
 
@@ -675,7 +661,7 @@ dir()
 
 # The del() function deletes (ReMoves) objects
 del(mydata)
-df
+mydata
 
 # You can remove a list using:
 # del list
