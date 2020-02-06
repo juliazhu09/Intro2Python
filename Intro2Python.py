@@ -207,11 +207,6 @@ id = [1, 2, 3, 4, 5, 6, 7, 8]
 id[0]
 id[7]
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-img=mpimg.imread('apples.png')
-imgplot = plt.imshow(img)
-plt.show()
 
 ## exercise 2##
 
@@ -336,13 +331,6 @@ def my_function_with_args(username, greeting):
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
-##  exercies 5 ##
-# Define a function that will print the string “Today is 'aday'!” to the screen, 
-# like Today is Thursday!, where aday is a day passed to the function as an argument. 
-# Then, call your function and pass a day to the function.
-# Hint: def day_function(aday):
-#          print("")
-
 
 #---FUNCTION OUTPUT---
 #
@@ -366,7 +354,7 @@ result = square(10)
 result
 # Notice: Cannot use print to return a value
 
-## exercies 6 ##
+## exercies 5 ##
 # write a function that will return a person's BMI, where height and weight are
 # two variable names passed to the function as the argument. 
 # Then call your function to compute 
@@ -424,7 +412,7 @@ def checkNumber(i, j):
 checkNumber(1, 1)
 checkNumber(10, 1)
 
-## exercise 7 ##
+## exercise 6 ##
 # Import the random module, and use the random function in it that gives you
 # a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
 # decimal places using round() print to the screen a message saying the
@@ -496,8 +484,8 @@ for i in range(3, 7): # start at 3 end before 7
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
     print(str(i))
     
-## exercise 8 ## 
-# Use the range() function to do exercise 7 five times. 
+## exercise 7 ## 
+# Use the range() function to do exercise 6 five times. 
 import random
 # generate a random number
 aRange= range()
@@ -564,11 +552,11 @@ print(os.getcwd()) # Prints the working directory
 os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python-master") # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
-os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python-master")
+os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
 
 
 # if "r"\\client\C$" does not work.
-os.chdir(r"I:\Classes\OIT_Training\Intro to Python")
+os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid")
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
@@ -598,6 +586,7 @@ mydata.describe()
 
 # list all the attributes and methods of mydata.
 dir(mydata)
+
 
 
 #---BASE GRAPHICS USING SEABORN---
