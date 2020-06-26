@@ -54,7 +54,7 @@ print(sys.executable)
 # https://help.utk.edu/kb/index.php?func=show&e=2473
 
 # Install a package using windows CMD 
-# Python Path/python -m pip install pacakagename 
+# pip install pacakagename 
 # C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn 
 
 
@@ -174,7 +174,7 @@ x = 1
 # Python's variable Types:
 # Number (int, long, float, Complex)
 # String
-# Boolean: Ture of False
+# Boolean: True of False
 # List
 # Tuple
 # Dictionary
@@ -184,29 +184,36 @@ x = 1
 x =  1
 type(x)
 
-x = 1.2
-type(x)
+y = 1.2
+type(y)
 
 a = "string"
 type(a)
 
 ## exercise 1 ##
-## Write a program that assigns three variables, one each of types string, int,
+## Write a program that assigns three variables, one of each types: string, int,
 ## and float. Variable names and values can be arbitrary. 
 ## Print each variable out to the screen.
+a="happy new year"
+b=2
+c=1.5
+print(a)
+print(b)
+print(c)
 
 
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
-# Variables can be mixed types in a list.
-mixlist = ["a", 1]
-mixlist
-# Note: first item's index is 0 not 1.
+
 id = [1, 2, 3, 4, 5, 6, 7, 8]
+
+# Note: first item's index is 0 not 1.
 # Show the first item of id.
 id[0]
 id[7]
-
+# Variables can be mixed types in a list.
+mixlist = ["a", 1]
+mixlist
 
 ## exercise 2##
 
@@ -220,7 +227,7 @@ id[7]
 # can use one name of your choice for those with multiple names). 
 # Then, print to the screen the name of Kangchenjunga by referencing 
 # its index position in the list.
-# Hint Mtn = ["K2",  ,  , ]
+# Hint Mtn = ["K2",  "Kangchenjunga" ]
 
 
 # Tuples:Like lists, contains several items enclosed within parenthesis.
@@ -387,7 +394,7 @@ if weather == "nice":
     print('I will mow the Lawn')
 else:
     print("I won't mow the Lawn")
-
+#note: double equal sign is used here. 
 
 # If/elif/else statement example,
 i = 1
@@ -412,18 +419,6 @@ def checkNumber(i, j):
 checkNumber(1, 1)
 checkNumber(10, 1)
 
-## exercise 6 ##
-# Import the random module, and use the random function in it that gives you
-# a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
-# decimal places using round() print to the screen a message saying the
-# number is odd or even. Part of the code are shown below,
-import random
-# generate a random number
-n = random.random()
-ni = round(n*1000.0, 0)
-m = ni % 2 # Modulo (%) calculates the remainder after division.
-# Plese write the if else statement below,
-
 
 # ---TABLE OF LOGICAL COMPARISONS---
 #
@@ -437,7 +432,24 @@ m = ni % 2 # Modulo (%) calculates the remainder after division.
 # Or                  |
 # 0<=x<=1             (x >= 0) & (x <=1)
 
-
+## exercise 6 ##
+# Import the random module, and use the random function in it that gives you
+# a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
+# decimal places using round() print to the screen a message saying the
+# number is odd or even. Part of the code are shown below,
+import random
+# generate a random number
+n = random.random()
+ni = round(n*1000.0, 0)
+m = ni % 2 # Modulo (%) calculates the remainder after division.
+print(str(m))
+# Plese write the if else statement below,
+if :
+    print("odd")
+else: 
+    print("even")
+    
+    
 # --- ITERATION---
 #
 # Iteration is typically done by means of a loop,
@@ -457,7 +469,7 @@ m = ni % 2 # Modulo (%) calculates the remainder after division.
 namelist = ["Bob", "Josh", "Cary","Michael","Rochelle", "Sun"]
 
 for name in namelist:
-    print ("Hello, " + name + "!")
+    print ("Hello, " + name + ", Merry Christmas!")
 
 
 aText = "Hello world!"
@@ -490,17 +502,25 @@ import random
 # generate a random number
 aRange= range()
 for 
+    n = random.random()
+    ni = round(n*1000.0, 0)
+    m = ni % 2 # Modulo (%) calculates the remainder after division.
+    # Plese write the if else statement below,
+    if m==1:
+        print("odd")
+    else: 
+        print("even")
 
 
 
 # ---WHILE STATEMENT ---
 #
 # Sometimes we use a condition statment to control the number of times
-# a loop repeated. As long as the condistion is true, the program
+# a loop repeats. As long as the condition is  true, the program
 # will repeatedly execute. So we need to use while statement.
 # Blocks of code under while statements repeat themselves until a
 # specified condition is detected as false - they make a while loop.
-# Before the indented block is (re)run, the condition is evaluated. It
+# Before the indented block (re)run, the condition is evaluated. It
 # runs only if the condition is true.
 
 i = 0
@@ -520,19 +540,12 @@ i
 # before reducing the temperature. In Python you could write and run the code
 # below, saved in example program cool.py:
 temperature = 115  
-while temperature  : # first while loop code
+while temperature   : # first while loop code
     print(temperature)
-    
-    
+    temperature = termperatur - 1
 print('The tea is cool enough.')
 
 #---QUESTIONS?---
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-img=mpimg.imread('Capture.jpg')
-imgplot = plt.imshow(img)
-plt.show()
-
 
 # ---FINDING FILES---
 #
@@ -549,14 +562,11 @@ print(os.getcwd()) # Prints the working directory
 # python path use "/" or "\\" instead of "\"
 # put a r in front of the path string without using / or \\.
 
-os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python-master") # Provide the path here
+os.chdir(r"C:\Users\XZHU8\Documents\Intro2python") # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
 os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
 
-
-# if "r"\\client\C$" does not work.
-os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid")
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
