@@ -6,7 +6,7 @@ Welcome to Intro2Python workshop!
 
    Option 2, if you want to download Spyder on your person machine, you can download it from Spyder website: https://www.spyder-ide.org/.
     
-2. Click the green "Clone or Download" button on the Intro2Python Github website to download a zip file. 
+2. Click the green "Code or Download" button on the Intro2Python Github website to download a zip file. 
 
 3. Unzip the zip file and extract all the files to "Documents" folder. A folder named "Intro2Python-master" is created under Documents folder.
 
