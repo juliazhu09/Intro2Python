@@ -194,12 +194,6 @@ type(a)
 ## Write a program that assigns three variables, one of each types: string, int,
 ## and float. Variable names and values can be arbitrary. 
 ## Print each variable out to the screen.
-a="happy new year"
-b=2
-c=1.5
-print(a)
-print(b)
-print(c)
 
 
 # create a list
@@ -210,6 +204,7 @@ id = [1, 2, 3, 4, 5, 6, 7, 8]
 # Note: first item's index is 0 not 1.
 # Show the first item of id.
 id[0]
+
 id[7]
 # Variables can be mixed types in a list.
 mixlist = ["a", 1]
@@ -570,6 +565,7 @@ os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
 
 # Note put "r" before the path by using "copy path" in windows
 # or use of forward slash or double backward slashes ("/" or "\\")
+os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid") 
 
 # Show the work directory again:
 print(os.getcwd())
