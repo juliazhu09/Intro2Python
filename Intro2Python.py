@@ -174,7 +174,7 @@ x = 1
 # Python's variable Types:
 # Number (int, long, float, Complex)
 # String
-# Boolean: True of False
+# Boolean: True or False
 # List
 # Tuple
 # Dictionary
@@ -196,6 +196,7 @@ type(a)
 ## Print each variable out to the screen.
 
 
+
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
 
@@ -204,9 +205,8 @@ id = [1, 2, 3, 4, 5, 6, 7, 8]
 # Note: first item's index is 0 not 1.
 # Show the first item of id.
 id[0]
-
 id[7]
-# Variables can be mixed types in a list.
+# Items can be mixed types in a list.
 mixlist = ["a", 1]
 mixlist
 
@@ -247,7 +247,7 @@ alist
 ## exercise 3 ##
 
 # create a tuple use Kangchenjunga's name and height and then query the height
-# of the Kanchenjuga
+# of the Kanchenjunga
 # hint:  mtn = ("K2", 8611)
 
 
@@ -264,6 +264,7 @@ aDict["a"]
 aDict["b"]
 aDict[7]
 
+
 ## exercise 4 ##
 # Mary’s favorite candy is chocolate, Rodrigo’s favorite is bubble gum, and
 # Larry’s is gummy bears. Write a dictionary that stores, for each person, 
@@ -273,7 +274,7 @@ aDict[7]
 # print() statement is a concatenation of some text and the result of querying 
 # your dictionary for that person’s favorite candy. 
 # Hint: aDict = {"Mary": "Chocolate"}
-# print("Mary's candy of chocie is" + aDict["Mary"])
+# print("Mary's candy of chocie is " + aDict["Mary"])
 
 
 # Keywords: reserved words in python.
@@ -297,8 +298,8 @@ print("hello world")
 
 # ---USER-DEFINED FUNCTIONS---
 #
-# A function statement starts with the def keyworkd, followed by
-# the function name, parameters and keywords.
+# A function statement starts with the def keyword, followed by
+# the function name, parameters and keywords and end with a colon":".
 #
 # Parameters/keywords in a function are called "arguments"
 # Arguments are enclosed within parentheses
@@ -354,19 +355,19 @@ def square(x):
 
 result = square(10)
 result
-# Notice: Cannot use print to return a value
+# Note: Cannot use print to return a value
 
 ## exercies 5 ##
 # write a function that will return a person's BMI, where height and weight are
 # two variable names passed to the function as the argument. 
 # Then call your function to compute 
-# a person's BMI with heigh of 1.6m and weight is 75kg. 
+# a person's BMI with heigh of 1.6m and weight of 75kg. 
 # Hint: def BMI(weight, height):
 #    aBMI = weight / (height * height)
     
 
 
-#---CONDITION STATEMENTS---
+#---CONDITIONAL STATEMENTS---
 #
 # In the real world, we commonly must evaluate information
 # around us and then choose one course of action or another
@@ -437,7 +438,7 @@ import random
 n = random.random()
 ni = round(n*1000.0, 0)
 m = ni % 2 # Modulo (%) calculates the remainder after division.
-print(str(m))
+print(m)
 # Plese write the if else statement below,
 if :
     print("odd")
@@ -469,8 +470,8 @@ for name in namelist:
 
 aText = "Hello world!"
 
-for l in aText:
-    print(l)
+for i in aText:
+    print(i)
 
 #---RANGE FUNCTION---
 #
@@ -510,7 +511,7 @@ for
 
 # ---WHILE STATEMENT ---
 #
-# Sometimes we use a condition statment to control the number of times
+# Sometimes we use a conditional statment to control the number of times
 # a loop repeats. As long as the condition is  true, the program
 # will repeatedly execute. So we need to use while statement.
 # Blocks of code under while statements repeat themselves until a
@@ -537,7 +538,7 @@ i
 temperature = 115  
 while temperature   : # first while loop code
     print(temperature)
-    temperature = termperatur - 1
+    temperature = temperature - 1
 print('The tea is cool enough.')
 
 #---QUESTIONS?---
@@ -582,7 +583,7 @@ mydata
 
 # ---OBJECT ATTRIBUTES AND METHODS---
 #
-# To access a variable or a method, use dot syntax.
+# To access a variable/attraibute or a method, use dot syntax.
 mydata.workshop
 mydata['workshop']
 # For example, mean() is a method of a dataframe
@@ -670,11 +671,11 @@ id
 #
 # Export a dataframe in your workspace as csv: dataframe.to_csv('test.csv')
 
-mydata.to_csv( r'C:\Users\XZHU8\Documents\test.csv')
+mydata100.to_csv( r'C:\Users\XZHU8\Documents\test.csv')
 
 # Save a datafram as excel: dataframe.to_excel('test.xls', index=False)
 
-mydata.to_excel('test.xls', index=False)
+mydata100.to_excel('test.xls', index=False)
 
 # --- QUESTIONS? ---
 
