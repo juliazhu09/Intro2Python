@@ -27,7 +27,7 @@
 # Run Spyder and open Intro2Python.py file.
 
 # ---STEP 3. INSTALL ADD-ON PACKAGES---
-#
+#%%
 # A Python package refers to a directory of Python
 # module(s). A module in python is a .py file that
 # defines one or more function/classes which you
@@ -42,6 +42,7 @@
 # Official Python description of modules and importing them:
 # https://docs.python.org/2/tutorial/modules.html
 # Check where is python installed and used by Rodeo/Spyder
+
 import sys
 print(sys.executable)
 
@@ -57,6 +58,47 @@ print(sys.executable)
 # pip install pacakagename 
 # C:\Users\XZHU8\AppData\Local\Continuum\anaconda3\python -m pip install seaborn 
 
+# reference: https://www.youtube.com/watch?v=Z_Kxg-EYvxM&t=4s
+
+# install a package using script
+
+
+    
+try:                    #The try block lets you test a block of code for errors.
+    import package
+except:                 # The except block lets you handle the error.# 
+    from pip._internal import main
+    main(['install', '<package>', '--user'])
+    import package
+    
+#for example
+
+try: 
+    import pandas
+except: 
+    from pip._internal import main
+    main(['install', 'pandas==1.2.1', '--user'])
+    import pandas
+# restart the spyder 
+import pandas
+pandas.__version__
+
+#%%    
+# other options -does not work on Julia's machine
+import sys
+import subprocess
+import conda.cli.python_api as Conda
+
+# implement conda as a subprocess:
+try: 
+    import scipy
+except:
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'scipy==1.6.0'])
+    # subprocess.check_call([sys.executable, '-m', 'conda', 'install', 'scipy==1.6.0'])
+import scipy
+scipy.__version__
+    
+
 
 # Show all of the packages installed under Python
 import pkg_resources
@@ -69,9 +111,9 @@ packages
 # select the following commands
 # and click "Run Current Cell" or "Run Current Line". If you see
 # the output, you're set.
-# If not, don't worry, you can watch
-# the workshop and fix this later.
-#
+# If not, don't worry, we only use the packages
+# in the last section of the workshop.
+#%%
 import os
 import sys
 import pandas as pd
@@ -88,7 +130,7 @@ print('Numpy version: ' + np.__version__)
 print('Scipy version: ' + sp.__version__)
 print('Seaborn version ' + sns.__version__)
 
-
+#%%
 # ---GOOD SOURCES OF PYTHON HELP---
 #
 # UT people get 15 hours per semester of
@@ -146,7 +188,7 @@ print('Seaborn version ' + sns.__version__)
 import os
 import sys
 import pandas as pd
-
+#%%
 # ---ASSIGNMENT OPERATOR---
 #
 # When creating objects, you give them
@@ -185,18 +227,19 @@ x =  1
 type(x)
 
 y = 1.2
-type(y)
+print(type(y))
 
 a = "string"
-type(a)
+print(type(a))
 
+#%%
 ## exercise 1 ##
 ## Write a program that assigns three variables, one of each types: string, int,
 ## and float. Variable names and values can be arbitrary. 
 ## Print each variable out to the screen.
 
 
-
+#%%
 # create a list
 # A list contains items separated by commas and enclosed within square brackets ([]).
 
@@ -208,8 +251,9 @@ id[0]
 id[7]
 # Items can be mixed types in a list.
 mixlist = ["a", 1]
-mixlist
+print(mixlist)
 
+#%%
 ## exercise 2##
 
 # The top five highest mountain peaks on Earth, according to Wikipedia, are as follows:
@@ -225,12 +269,15 @@ mixlist
 # Hint Mtn = ["K2",  "Kangchenjunga" ]
 
 
+
+#%%
 # Tuples:Like lists, contains several items enclosed within parenthesis.
 # but immutable, and usually used for smaller sequences
 # of things that are related to each other.
 # Think of Cartesian coordinates:(x, y, z)
 # The differences between tuples and lists are, the tuples cannot be changed
 # unlike lists, tuples use parentheses, whereas lists use square brackets.
+
 aTuple = ("foo", "bar")
 len(aTuple)
 
@@ -242,8 +289,9 @@ aTuple[0] = 100
 alist=["foo", "bar"]
 alist[0] = 100
 
-alist
+print(alist)
 
+#%%
 ## exercise 3 ##
 
 # create a tuple use Kangchenjunga's name and height and then query the height
@@ -251,20 +299,22 @@ alist
 # hint:  mtn = ("K2", 8611)
 
 
+#%%
 # Dicitonairy: A collection of variables indexed by other, "key" variables.
 # Instead of using numeric or default index in python, if you want to
 # create your own index, you need to use dictionary.
+
 aDict = {}
 aDict["a"] = 364936
 aDict["b"] = 12.4
 aDict[7] = "hi"
 
-aDict
+print(aDict)
 aDict["a"]
 aDict["b"]
 aDict[7]
 
-
+#%%
 ## exercise 4 ##
 # Mary’s favorite candy is chocolate, Rodrigo’s favorite is bubble gum, and
 # Larry’s is gummy bears. Write a dictionary that stores, for each person, 
@@ -277,12 +327,14 @@ aDict[7]
 # print("Mary's candy of chocie is " + aDict["Mary"])
 
 
+#%%
 # Keywords: reserved words in python.
 # Cannot be used as a variable name.
 import keyword
 print(keyword.kwlist)
 
 
+#%%
 # ---PYTHON FUNCTIONS---
 
 # As you already know, Python gives you many built-in
@@ -334,7 +386,7 @@ def my_function_with_args(username, greeting):
 #prints - "Hello, Julia, From My Function!, I wish you a great year!"
 my_function_with_args("Mary", "a great year")
 
-
+#%%
 #---FUNCTION OUTPUT---
 #
 #  Returning a value from a function, Not only can
@@ -354,9 +406,10 @@ def square(x):
     return y
 
 result = square(10)
-result
+print(result)
 # Note: Cannot use print to return a value
 
+#%%
 ## exercies 5 ##
 # write a function that will return a person's BMI, where height and weight are
 # two variable names passed to the function as the argument. 
@@ -366,7 +419,7 @@ result
 #    aBMI = weight / (height * height)
     
 
-
+#%%
 #---CONDITIONAL STATEMENTS---
 #
 # In the real world, we commonly must evaluate information
@@ -381,8 +434,6 @@ result
 #
 # Blocks of code under if statements are executed as long
 # as the stated condition is true.
-# Can have elif (which is a contraction of "else if") and/or
-# else statements associated, when the condition is not true.
 
 # Here is an if/else-statement example:
 weather = str(input('How is the weather today, nice or not? '))
@@ -392,6 +443,8 @@ else:
     print("I won't mow the Lawn")
 #note: double equal sign is used here. 
 
+# Can have elif (which is a contraction of "else if") and/or
+# else statements associated, when the condition is not true.
 # If/elif/else statement example,
 i = 1
 j = 2
@@ -415,7 +468,7 @@ def checkNumber(i, j):
 checkNumber(1, 1)
 checkNumber(10, 1)
 
-
+#%%
 # ---TABLE OF LOGICAL COMPARISONS---
 #
 # Equals              ==
@@ -445,7 +498,7 @@ if :
 else: 
     print("even")
     
-    
+#%%   
 # --- ITERATION---
 #
 # Iteration is typically done by means of a loop,
@@ -472,7 +525,8 @@ aText = "Hello world!"
 
 for i in aText:
     print(i)
-
+    
+    
 #---RANGE FUNCTION---
 #
 # Often we want to repeat an action some specified number of
@@ -491,7 +545,8 @@ for i in range(3, 7): # start at 3 end before 7
 
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
     print(str(i))
-    
+
+#%%
 ## exercise 7 ## 
 # Use the range() function to do exercise 6 five times. 
 import random
@@ -508,7 +563,7 @@ for
         print("even")
 
 
-
+#%%
 # ---WHILE STATEMENT ---
 #
 # Sometimes we use a conditional statment to control the number of times
@@ -523,11 +578,11 @@ i = 0
 while i < 10:
     print(str(i) + " is less than 10")
     i = i + 1
-i
+print(i)
 # If we left out the increment, 1 could always be <10,
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
-
+#%%
 ## exercise 9 ##
 # To make things concrete and numerical, suppose the following: 
 # The tea starts at 115 degrees Fahrenheit. You want it at 112 degrees.
@@ -541,6 +596,7 @@ while temperature   : # first while loop code
     temperature = temperature - 1
 print('The tea is cool enough.')
 
+#%%
 #---QUESTIONS?---
 
 # ---FINDING FILES---
@@ -552,29 +608,33 @@ print('The tea is cool enough.')
 import os
 print(os.getcwd()) # Prints the working directory
 
-
-# Set the working directory:
-
-# python path use "/" or "\\" instead of "\"
-# put a r in front of the path string without using / or \\.
-
-os.chdir(r"C:\Users\XZHU8\Documents\Intro2python") # Provide the path here
-
-# if your run spyder on Apps.utk.edu, use the code below
-os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
-
-
-# Note put "r" before the path by using "copy path" in windows
-# or use of forward slash or double backward slashes ("/" or "\\")
-os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid") 
-
-# Show the work directory again:
-print(os.getcwd())
-
 # Read file from the current work directory
 
 import pandas as pd
-mydata = pd.read_csv("mydata.csv")
+try:
+    mydata = pd.read_csv("mydata.csv")
+except:
+    import os
+    # Set the working directory:
+
+    # python path use "/" or "\\" instead of "\"
+    # put a r in front of the path string without using / or \\.
+
+    os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python") # Provide the path here
+
+    # if your run spyder on Apps.utk.edu, use the code below
+    ## os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
+
+    # Note put "r" before the path by using "copy path" in windows
+    # or use of forward slash or double backward slashes ("/" or "\\")
+    ## os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid") 
+
+    # Show the work directory again:
+    print(os.getcwd())
+
+    # Read file from the current work directory
+
+    mydata = pd.read_csv("mydata.csv")
 
 # show the first five lines of mydata
 mydata.head()
@@ -589,17 +649,29 @@ mydata['workshop']
 # For example, mean() is a method of a dataframe
 mydata.mean()
 
-mydata.describe()
+# return the means grouped by gender using groupby methods
+
+mydata100.groupby('gender').mean()
+
+
+# return means/median/std group by gender using groupby 
+
+out = mydata100.groupby('gender').agg(['mean', 'median', 'std'])
+print(out)
+
+basic = mydata.describe()
+print(basic)
 
 # list all the attributes and methods of mydata.
 dir(mydata)
 
 
-
+#%%
 #---BASE GRAPHICS USING SEABORN---
 
 import seaborn as sns
-import matplotlib
+import matplotlib 
+import matplotlib.pyplot as plt
 import pandas as pd
 
 mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
@@ -611,18 +683,21 @@ print(mydata100[:6])
 # Barplot stacked
 sns.set(color_codes=True) #Change how matplotlib color shorthands are interpreted.
 sns.catplot(x="workshop", kind="count", color="b", data=mydata100)
+plt.show()
 
 # Boxplot
 # Draw a single horizontal boxplot:
 ax = sns.boxplot(x=mydata100["posttest"])
+plt.show()
 
 #Draw a vertical boxplot grouped by a categorical variable:
-ax = sns.boxplot(x="workshop", y="posttest", data=mydata100)
+bx = sns.boxplot(x="workshop", y="posttest", data=mydata100)
+plt.show()
 
 #Draw a boxplot with nested grouping by two categorical variables:
-ax = sns.boxplot(x="workshop", y="posttest", hue="gender",
+cx = sns.boxplot(x="workshop", y="posttest", hue="gender",
                  data=mydata100)
-
+plt.show()
 
 # Scatterplot
 
@@ -633,15 +708,17 @@ sns.scatterplot(x="pretest", y="posttest", data=mydata100)
 # and plot the resulting regression line
 # and a 95% confidence interval for that regression:
 sns.regplot(x="pretest", y="posttest", data=mydata100)
+plt.show()
 
 # Histogram
 
-sns.distplot(mydata100['posttest'])
-
+hist = sns.distplot(mydata100['posttest'])
+plt.show()
 from scipy.stats import norm
 # Get rid of kernel fit
-sns.distplot(mydata100['posttest'], fit=norm, kde=False)
-
+hist2 = sns.distplot(mydata100['posttest'], fit=norm, kde=False)
+plt.show()
+#%%
 # For many more examples,
 # see: https://seaborn.pydata.org/tutorial.html
 
