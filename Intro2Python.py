@@ -142,7 +142,7 @@ print('Seaborn version ' + sns.__version__)
 #
 # Python & R cheat sheets: https://www.datacamp.com/community/data-science-cheatsheets?page=3
 # R & SAS/SPSS/Stata:      http://www.r4stats.com
-# Statckoverflow:          https://stackoverflow.com/questions
+# Stackoverflow:          https://stackoverflow.com/questions
 
 # ---RUNNING PYTHON COMMANDS---
 #
@@ -210,6 +210,25 @@ x = 1
 # But cannot have space or period.
 # Case matters, e.g. myvar is not MyVar
 #
+# ---OBJECT ATTRIBUTES AND METHODS---
+#
+# To access a variable/attraibute or a method, use dot syntax.
+
+# # use pandas to create mydata as a dataframe object. 
+
+import pandas as pd
+mydata = pd.DataFrame(data={'id': [1, 2, 3, 4, 5, 6, 7, 8],
+                'workshop': [1, 2, 1, 2, 1, 2, 1, 2],
+                'gender' : ['f', 'f', 'f', ''  ,'m', 'm', 'm', 'm',]})
+mydata.head(4)
+# access an attribute or variable from mydata
+mydata.workshop
+
+# For example, mean() is a method of a dataframe
+mydata.mean()
+
+# list all the attributes and methods of mydata.
+dir(mydata)
 
 #---PYTHON VARIABLES---
 # 
@@ -303,6 +322,7 @@ print(alist)
 # Dicitonairy: A collection of variables indexed by other, "key" variables.
 # Instead of using numeric or default index in python, if you want to
 # create your own index, you need to use dictionary.
+# "Curly Braces" are used in Python to define a dictionary.
 
 aDict = {}
 aDict["a"] = 364936
@@ -417,7 +437,9 @@ print(result)
 # a person's BMI with heigh of 1.6m and weight of 75kg. 
 # Hint: def BMI(weight, height):
 #    aBMI = weight / (height * height)
-    
+# Formula: weight (kg) / [height (cm)]^2 
+# Formula: weight (lb) / [height (in)]^2 x 703
+
 
 #%%
 #---CONDITIONAL STATEMENTS---
@@ -486,12 +508,11 @@ checkNumber(10, 1)
 # a value in the range [0.0, 1.0), multiply it by 10,000, and round it to zero
 # decimal places using round() print to the screen a message saying the
 # number is odd or even. Part of the code are shown below,
-import random
-# generate a random number
-n = random.random()
-ni = round(n*1000.0, 0)
-m = ni % 2 # Modulo (%) calculates the remainder after division.
-print(m)
+from random import randint
+# generate a random number ranging from 0 to 1000
+n = randint(0,1000)
+m = n % 2 # Modulo (%) calculates the remainder after division.
+print(n)
 # Plese write the if else statement below,
 if :
     print("odd")
@@ -537,37 +558,40 @@ for i in aText:
 # Ask for a range of itegers, starting at zero and ending before 7.
 aRange =  range(7)
 for i in aRange:
-    print(str(i))
+    print(i)
 
 
 for i in range(3, 7): # start at 3 end before 7
-    print(str(i))
+    print(i)
 
 for i in range(2, 12, 3): #start at 2, end before 12, increment by 3
-    print(str(i))
+    print(i)
 
 #%%
 ## exercise 7 ## 
 # Use the range() function to do exercise 6 five times. 
-import random
-# generate a random number
-aRange= range()
-for 
-    n = random.random()
-    ni = round(n*1000.0, 0)
-    m = ni % 2 # Modulo (%) calculates the remainder after division.
-    # Plese write the if else statement below,
+from random import randint
+# use for statement to run the statement five times
+
+for i in    :
+    n = randint(0, 1000)
+    m = n % 2 # Modulo (%) calculates the remainder after division.
+        # Plese write the if else statement below,
     if m==1:
-        print("odd")
+        print(str(n) + " is an odd number.")
     else: 
-        print("even")
+        print(str(n) + " is an even number.")
+
+## extra credit assignment ## 
+# use a for statement to calucate the sum of consecutive numbers 1 to 100
+# print the result to the screen
 
 
 #%%
 # ---WHILE STATEMENT ---
 #
 # Sometimes we use a conditional statment to control the number of times
-# a loop repeats. As long as the condition is  true, the program
+# a loop repeats. As long as the condition is true, the program
 # will repeatedly execute. So we need to use while statement.
 # Blocks of code under while statements repeat themselves until a
 # specified condition is detected as false - they make a while loop.
@@ -579,7 +603,7 @@ while i < 10:
     print(str(i) + " is less than 10")
     i = i + 1
 print(i)
-# If we left out the increment, 1 could always be <10,
+# If we left out the increment, i could always be <10,
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
 #%%
@@ -590,9 +614,9 @@ print(i)
 # You test the temperature each time, and also print out the temperature 
 # before reducing the temperature. In Python you could write and run the code
 # below, saved in example program cool.py:
-temperature = 115  
-while temperature   : # first while loop code
-    print(temperature)
+temperature = 118  
+while temperature <= 112 : # first while loop code
+    print(str(temperature))
     temperature = temperature - 1
 print('The tea is cool enough.')
 
@@ -612,7 +636,7 @@ print(os.getcwd()) # Prints the working directory
 
 import pandas as pd
 try:
-    mydata = pd.read_csv("mydata.csv")
+    mydata100 = pd.read_csv("mydata100.csv")
 except:
     import os
     # Set the working directory:
@@ -634,20 +658,24 @@ except:
 
     # Read file from the current work directory
 
-    mydata = pd.read_csv("mydata.csv")
+    mydata100 = pd.read_csv("mydata100.csv")
 
 # show the first five lines of mydata
-mydata.head()
-# see all the rows of mydata
-mydata
+mydata100.head()
 
-# ---OBJECT ATTRIBUTES AND METHODS---
+# see 10 rows of mydata
+mydata100.head(10)
+
+# --- BASIC DESCRIPTIVE ANALYSIS---
 #
-# To access a variable/attraibute or a method, use dot syntax.
-mydata.workshop
-mydata['workshop']
-# For example, mean() is a method of a dataframe
-mydata.mean()
+# get the mean, sum and summary of mydata100
+mydata100.mean()
+
+mydata100.sum()
+
+# use describe function
+basic = mydata100.describe()
+print(basic)
 
 # return the means grouped by gender using groupby methods
 
@@ -659,11 +687,9 @@ mydata100.groupby('gender').mean()
 out = mydata100.groupby('gender').agg(['mean', 'median', 'std'])
 print(out)
 
-basic = mydata.describe()
-print(basic)
 
-# list all the attributes and methods of mydata.
-dir(mydata)
+
+
 
 
 #%%
@@ -674,10 +700,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
-mydata100 = pd.read_csv(r'mydata100.csv', sep=',')
-print(mydata100[:6])
-
-
 # Barplot
 
 # Barplot stacked
@@ -687,15 +709,15 @@ plt.show()
 
 # Boxplot
 # Draw a single horizontal boxplot:
-ax = sns.boxplot(x=mydata100["posttest"])
+sns.boxplot(x=mydata100["posttest"])
 plt.show()
 
 #Draw a vertical boxplot grouped by a categorical variable:
-bx = sns.boxplot(x="workshop", y="posttest", data=mydata100)
+sns.boxplot(x="workshop", y="posttest", data=mydata100)
 plt.show()
 
 #Draw a boxplot with nested grouping by two categorical variables:
-cx = sns.boxplot(x="workshop", y="posttest", hue="gender",
+sns.boxplot(x="workshop", y="posttest", hue="gender",
                  data=mydata100)
 plt.show()
 
@@ -712,8 +734,9 @@ plt.show()
 
 # Histogram
 
-hist = sns.distplot(mydata100['posttest'])
+sns.distplot(mydata100['posttest'])
 plt.show()
+
 from scipy.stats import norm
 # Get rid of kernel fit
 hist2 = sns.distplot(mydata100['posttest'], fit=norm, kde=False)
@@ -724,10 +747,8 @@ plt.show()
 
 # ---LISTING OBJECTS IN YOUR WORKSPACE---
 #
-# dir(): a list of in scope variables
 # %who: Print all interactive variables, with some minimal formatting.
 # %whos: like %who, but gives some extra information about each variable.
-dir()
 %who
 %whos
 # ---DELETING OBJECTS---
