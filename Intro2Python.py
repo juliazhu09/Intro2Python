@@ -141,8 +141,10 @@ print('Seaborn version ' + sns.__version__)
 #   http://oit.utk.edu/research/schedule
 #
 # Python & R cheat sheets: https://www.datacamp.com/community/data-science-cheatsheets?page=3
-# R & SAS/SPSS/Stata:      http://www.r4stats.com
+# R & SAS/SPSS/Stata:     http://www.r4stats.com
+# Linkedin learning:      https://oit.utk.edu/training/online-training/lil/
 # Stackoverflow:          https://stackoverflow.com/questions
+
 
 # ---RUNNING PYTHON COMMANDS---
 #
@@ -220,7 +222,7 @@ import pandas as pd
 mydata = pd.DataFrame(data={'id': [1, 2, 3, 4, 5, 6, 7, 8],
                 'workshop': [1, 2, 1, 2, 1, 2, 1, 2],
                 'gender' : ['f', 'f', 'f', ''  ,'m', 'm', 'm', 'm',]})
-mydata.head(4)
+mydata
 # access an attribute or variable from mydata
 mydata.workshop
 
@@ -539,7 +541,7 @@ else:
 namelist = ["Bob", "Josh", "Cary","Michael","Rochelle", "Sun"]
 
 for name in namelist:
-    print ("Hello, " + name + ", Merry Christmas!")
+    print ("Hello " + name + ", Merry Christmas!")
 
 
 aText = "Hello world!"
@@ -603,7 +605,7 @@ while i < 10:
     print(str(i) + " is less than 10")
     i = i + 1
 print(i)
-# If we left out the increment, i could always be <10,
+# If i had left out the increment, i could always be <10,
 # and we'd get an infinite loop.
 # Use Ctrl+C to terminate a loop.
 #%%
@@ -615,7 +617,7 @@ print(i)
 # before reducing the temperature. In Python you could write and run the code
 # below, saved in example program cool.py:
 temperature = 118  
-while temperature <= 112 : # first while loop code
+while temperature  : # first while loop code
     print(str(temperature))
     temperature = temperature - 1
 print('The tea is cool enough.')
