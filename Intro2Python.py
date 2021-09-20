@@ -130,21 +130,6 @@ print('Numpy version: ' + np.__version__)
 print('Scipy version: ' + sp.__version__)
 print('Seaborn version ' + sns.__version__)
 
-#%%
-# ---GOOD SOURCES OF PYTHON HELP---
-#
-# UT people get 15 hours per semester of
-# free help in 540 Greve Hall:
-#
-#   HelpDesk: 974-9900
-#   Walk-in Schedule:
-#   http://oit.utk.edu/research/schedule
-#
-# Python & R cheat sheets: https://www.datacamp.com/community/data-science-cheatsheets?page=3
-# R & SAS/SPSS/Stata:     http://www.r4stats.com
-# Linkedin learning:      https://oit.utk.edu/training/online-training/lil/
-# Stackoverflow:          https://stackoverflow.com/questions
-
 
 # ---RUNNING PYTHON COMMANDS---
 #
@@ -258,6 +243,7 @@ print(type(a))
 ## Write a program that assigns three variables, one of each types: string, int,
 ## and float. Variable names and values can be arbitrary. 
 ## Print each variable out to the screen.
+
 
 
 #%%
@@ -637,35 +623,35 @@ print(os.getcwd()) # Prints the working directory
 # Read file from the current work directory
 
 import pandas as pd
-try:
-    mydata100 = pd.read_csv("mydata100.csv")
-except:
-    import os
-    # Set the working directory:
+#try:
+mydata100 = pd.read_csv("mydata100.csv")
+# if the command above does not work
 
-    # python path use "/" or "\\" instead of "\"
-    # put a r in front of the path string without using / or \\.
+import os
+# Set the working directory:
+# python path use "/" or "\\" instead of "\"
+# put a r in front of the path string without using / or \\.
 
-    os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python") # Provide the path here
+os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python") # Provide the path here
 
-    # if your run spyder on Apps.utk.edu, use the code below
-    ## os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
+# if your run spyder on Apps.utk.edu, use the code below
+## os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
 
-    # Note put "r" before the path by using "copy path" in windows
-    # or use of forward slash or double backward slashes ("/" or "\\")
-    ## os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid") 
+# Note put "r" before the path by using "copy path" in windows
+# or use of forward slash or double backward slashes ("/" or "\\")
+## os.chdir(r"I:\Classes\OIT_Training\Intro to Python\netid") 
 
-    # Show the work directory again:
-    print(os.getcwd())
+# Show the work directory again:
+print(os.getcwd())
 
-    # Read file from the current work directory
+# Read file from the current work directory
 
-    mydata100 = pd.read_csv("mydata100.csv")
+mydata100 = pd.read_csv("mydata100.csv")
 
-# show the first five lines of mydata
+# show the first five lines of mydata100
 mydata100.head()
 
-# see 10 rows of mydata
+# see 10 rows of mydata100
 mydata100.head(10)
 
 # --- BASIC DESCRIPTIVE ANALYSIS---
@@ -778,6 +764,21 @@ mydata100.to_csv( r'C:\Users\XZHU8\Documents\test.csv')
 mydata100.to_excel('test.xls', index=False)
 
 # --- QUESTIONS? ---
+#%%
+# ---GOOD SOURCES OF PYTHON HELP---
+#
+# UT people get 15 hours per semester of
+# free help in 540 Greve Hall:
+#
+#   HelpDesk: 974-9900
+#   Walk-in Schedule:
+#   http://oit.utk.edu/research/schedule
+#
+# Python & R cheat sheets: https://www.datacamp.com/community/data-science-cheatsheets?page=3
+# R & SAS/SPSS/Stata:     http://www.r4stats.com
+# Linkedin learning:      https://oit.utk.edu/training/online-training/lil/
+# Stackoverflow:          https://stackoverflow.com/questions
+
 
 # ---In a New Browser Tab---
 #
