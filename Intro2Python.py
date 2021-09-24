@@ -64,7 +64,7 @@ print(sys.executable)
 
 
     
-try:                    #The try block lets you test a block of code for errors.
+try:           #The try block lets you test a block of code for errors.
     import package
 except:                 # The except block lets you handle the error.# 
     from pip._internal import main
@@ -571,8 +571,10 @@ for i in    :
         print(str(n) + " is an even number.")
 
 ## extra credit assignment ## 
+## exercise 8 ##
 # use a for statement to calucate the sum of consecutive numbers 1 to 100
 # print the result to the screen
+
 
 
 #%%
@@ -620,19 +622,13 @@ print('The tea is cool enough.')
 import os
 print(os.getcwd()) # Prints the working directory
 
-# Read file from the current work directory
 
-import pandas as pd
-#try:
-mydata100 = pd.read_csv("mydata100.csv")
-# if the command above does not work
-
-import os
 # Set the working directory:
 # python path use "/" or "\\" instead of "\"
 # put a r in front of the path string without using / or \\.
+import os
 
-os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python") # Provide the path here
+os.chdir(r"C:\Users\xzhu8\Downloads\Intro2Python-master") # Provide the path here
 
 # if your run spyder on Apps.utk.edu, use the code below
 ## os.chdir(r"\\client\C$\Users\XZHU8\Documents\Intro2python")
@@ -645,6 +641,8 @@ os.chdir(r"C:\Users\XZHU8\Documents\Intro to Python") # Provide the path here
 print(os.getcwd())
 
 # Read file from the current work directory
+
+import pandas as pd
 
 mydata100 = pd.read_csv("mydata100.csv")
 
@@ -718,17 +716,17 @@ sns.scatterplot(x="pretest", y="posttest", data=mydata100)
 # and plot the resulting regression line
 # and a 95% confidence interval for that regression:
 sns.regplot(x="pretest", y="posttest", data=mydata100)
-plt.show()
+#plt.show()
 
 # Histogram
 
 sns.distplot(mydata100['posttest'])
-plt.show()
+#plt.show()
 
 from scipy.stats import norm
 # Get rid of kernel fit
 hist2 = sns.distplot(mydata100['posttest'], fit=norm, kde=False)
-plt.show()
+#plt.show()
 #%%
 # For many more examples,
 # see: https://seaborn.pydata.org/tutorial.html
