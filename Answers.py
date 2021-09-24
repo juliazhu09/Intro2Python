@@ -22,23 +22,14 @@ aDict["Larry"]="gummy bears"
 aDict["Mary"]
 print("Mary's candy of chocie is", aDict["Mary"])
 
-## exercise 5##
-def day_function(aday):
-    # Both of these would work:
-    # print("Today " + aday + "!")
-    string = "Today " + aday + "!"
-    print(string)
-
-day_function("Thursday")
-
-## exercise 6 ##
+## exercise 5 ##
 def BMI(height, weight):
     aBMI = weight / (height * height)
     return aBMI
 
 BMI(1.60, 75)
 
-## exercise 8 ##
+## exercise 6 ##
 import random
 # generate a random number
 n = random.random()
@@ -49,7 +40,7 @@ if (m >0):
 else:
     print(str(ni) +" is an even number.")
 
-## exercise 8##
+## exercise 7##
 import random
 
 for i in range(5):
@@ -60,6 +51,14 @@ for i in range(5):
         print(str(ni) + " is an odd number.")
     else:
         print(str(ni) + " is an even number.")
+## exercise 8##
+sum = 0
+for i in range(1, 101):
+    sum = i+sum
+print(sum)
+
+
+
 ## exercise 9 ##
 temperature = 115
 while temperature > 112: # first while loop code
