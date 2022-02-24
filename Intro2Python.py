@@ -73,15 +73,12 @@ except:                 # The except block lets you handle the error.#
     
 #for example
 
-try: 
-    import pandas
-except: 
-    from pip._internal import main
-    main(['install', 'pandas==1.2.1', '--user'])
-    import pandas
+from pip._internal import main
+main(['install', 'seaborn==0.11.2', '--user'])
+
 # restart the spyder 
-import pandas
-pandas.__version__
+import seaborn
+seaborn.__version__
 
 #%%    
 # other options -does not work on Julia's machine
