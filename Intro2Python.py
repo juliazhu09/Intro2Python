@@ -62,14 +62,10 @@ print(sys.executable)
 
 # install a package using script
 
-
-    
-try:           #The try block lets you test a block of code for errors.
-    import package
-except:                 # The except block lets you handle the error.# 
-    from pip._internal import main
-    main(['install', '<package>', '--user'])
-    import package
+   
+from pip._internal import main
+main(['install', '<package>', '--user'])
+import package
     
 #for example
 
@@ -153,7 +149,7 @@ print('Seaborn version ' + sns.__version__)
 # prompt
 #   -Submit the missing piece of the command, or
 #    use Ctrl+C
-
+#    ipython use ESC key
 
 # ---DOCUMENTING YOUR PROGRAMS---
 
