@@ -2,12 +2,14 @@
 
 Welcome to Intro2Python workshop! 
 
-1. Go to Apps.utk.edu and log in with your netid and password. Find the Sypder icon and click on it to open Spyder.
+**For online Python users (updated on 8/21/25):**
 
-   Option 2, if you want to download Spyder on your person machine, you can download it from Spyder website: https://www.spyder-ide.org/.
-    
-2. Click the green "Code or Download" button on the Intro2Python Github website to download a zip file. 
+You can use Google Colab to run the Python commands in the workshop.
 
-3. Unzip the zip file and extract all the files to "Documents" folder. A folder named "Intro2Python-master" is created under Documents folder.
+Google Colab allows anybody to write and execute Python codes through the web browser. Here is a 3-minute Google Colab introduction:  
+https://www.youtube.com/watch?v=inN8seMm7UILinks to an external site.
+You open the script file from my GitHub, named **ONLINE,_SELF_PACED,_Python_Introduction.ipynb**. The script file can be opened directly using Google Colab by clicking the **Open in Colab** button at the top of the script. 
 
-4. Open Spyder->File->Open->Intro2Pyton.py
+**For local Python users:**
+
+If you want to download Python on your personal machine, please install Anaconda to access Spyder or other Python IDEs. Here is the website:https://www.anaconda.com/download.
