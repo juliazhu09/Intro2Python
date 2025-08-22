@@ -13,8 +13,8 @@ Here’s a quick 3-minute introduction to Google Colab: https://www.youtube.com/
 
 **How to Access the Workshop Script:**
 Open the script file from my GitHub repository:
-ONLINE_SELF_PACED_Python_Introduction.ipynb
-Use the Open in Colab button at the top of the script file to open it directly in Google Colab.
+**ONLINE_SELF_PACED_Python_Introduction.ipynb**
+Use the **Open in Colab** button at the top of the script file to open it directly in Google Colab.
 
 ## For local Python users:
 **Download Anaconda to use Spyder**
