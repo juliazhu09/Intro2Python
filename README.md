@@ -2,7 +2,7 @@
 
 Welcome to Intro2Python workshop! 
 
-## For online Python users (updated on 8/21/25):**
+## For online Python users (updated on 8/21/25):
 
 You can use** Google Colab** to run the Python commands provided in this workshop.
 
