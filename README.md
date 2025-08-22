@@ -4,7 +4,7 @@ Welcome to Intro2Python workshop!
 
 ## For online Python users (updated on 8/21/25):
 
-You can use** Google Colab** to run the Python commands provided in this workshop.
+You can use **Google Colab** to run the Python commands provided in this workshop.
 
 **What is Google Colab?**
 Google Colab is a free platform that allows anyone to write and execute Python code directly in their web browser. It’s an excellent tool for learning and experimenting with Python without needing to install anything locally.
