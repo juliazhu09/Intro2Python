@@ -10,8 +10,7 @@ You can use Google Colab to run the Python commands provided in this workshop.
 Google Colab is a free platform that allows anyone to write and execute Python code directly in their web browser. It’s an excellent tool for learning and experimenting with Python without needing to install anything locally.
 
 Here’s a quick 3-minute introduction to Google Colab:  
-https://www.youtube.com/watch?v=inN8seMm7UILinks to an external site.
-
+https://www.youtube.com/watch?v=inN8seMm7UI .
 **How to Access the Workshop Script:**
 Open the script file from my GitHub repository:
 ONLINE_SELF_PACED_Python_Introduction.ipynb
